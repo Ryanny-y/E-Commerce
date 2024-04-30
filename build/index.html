@@ -16,7 +16,7 @@
   <header id="header" class="bg-black text-white text-sm sticky h-12 right-0 left-0 py-10 sm:py-2 z-10">
     <div class="container">
       <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
-        <p class="text-start w-9/12 md:text-center md:w-full">
+        <p class="text-start text-xs w-9/12 md:text-center md:w-full sm:text-xs">
           <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%</span>
           <button class="text-white text-sm underline outline-none font-bold h-transition hover:text-p-red n">ShopNow</button>
         </p>
@@ -37,7 +37,7 @@
 
           <div class="small-size block md:hidden">
             <button class="select-language hover:text-p-red">
-              <i class="fa-solid fa-globe text-2xl"></i>
+              <i class="fa-solid fa-globe text-lg sm:text-sm"></i>
               <i class="fa-solid fa-chevron-down"></i>
             </button>
             
@@ -62,12 +62,12 @@
 
   <main class="py-4">
     <section class="hero relative text-black">
-      <div class="container">
-        <div class="hero-header flex gap-5 items-center justify-between">
-          <h1 class="title text-2xl font-bold w-60 basis-44">Exclusive</h1>
+      <div class="container sticky top-0">
+        <div class="hero-header flex gap-1 items-center justify-between flex-wrap md:gap-5">
+          <h1 class="title text-2xl font-bold w-60 basis-44 hidden md:block md:basis-24" >Exclusive</h1>
 
-          <div class="hero-header-nav grow shrink">
-            <ul class="text-base flex align-center justify-start gap-10 p-5 ">
+          <div class="hero-header-nav w-full md:grow md:shrink md:w-0">
+            <ul class="text-xs flex align-center justify-center gap-10 py-3 sm:text-sm md:p-5 md:justify-start lg:text-base">
               <li><a href="">Home</a></li>
               <li><a href="">Contact</a></li>
               <li><a href="">About</a></li>
@@ -75,8 +75,8 @@
             </ul>
           </div>
 
-          <div class="header-search shrink-0 flex items-center gap-4">
-            <span class="search-bar bg-slate-50 text-base px-5 py-3 flex gap-5">
+          <div class="header-search text-xs shrink-0 flex items-center gap-4 justify-center w-full sm:text-sm md:w-0 md:justify-end">
+            <span class="search-bar bg-neutral-100 text-xs px-5 py-2 flex items-center gap-5 sm:text-sm md:text-base md:px-3">
               <input type="text" class="bg-transparent border-none text-sm outline-none caret-p-red" placeholder="What are you looking for?">
               <i class="fa-solid fa-magnifying-glass bg-transparent h-transition hover:text-p-red"></i>
             </span>
@@ -92,6 +92,8 @@
 
         </div>
       </div>
+
+
     </section>
   </main>
 
