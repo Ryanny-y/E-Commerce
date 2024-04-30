@@ -11,25 +11,25 @@
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
-<body>  
+<body>
 
-  <header id="header" class="bg-black text-white text-sm fixed h-12 right-0 left-0 py-10 sm:py-2">
+  <header id="header" class="bg-black text-white text-sm sticky h-12 right-0 left-0 py-10 sm:py-2 z-10">
     <div class="container">
       <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
         <p class="text-start w-9/12 md:text-center md:w-full">
           <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%</span>
-          <button class="text-white text-sm underline outline-none font-bold hover:text-p-red">ShopNow</button>
+          <button class="text-white text-sm underline outline-none font-bold h-transition hover:text-p-red n">ShopNow</button>
         </p>
 
         <div class="language-selector absolute right-0">
-          <div class="hidden md:block large-screen cursor-pointer hover:text-p-red">
+          <div class="hidden md:block large-screen cursor-pointer h-transition hover:text-p-red ">
             <button class="mr-1">English</button>
 
             <ul class="absolute top-5 right-2.5 p-2 text-end w-24 bg-black text-white flex-col gap-2">
-              <li><button href="" class="hover:text-p-red">English</button></li>
-              <li><button href="" class="hover:text-p-red">English</button></li>
-              <li><button href="" class="hover:text-p-red">English</button></li>
-              <li><button href="" class="hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
             </ul>
 
             <i class="fa-solid fa-chevron-down"></i>
@@ -47,10 +47,10 @@
               </button>
 
               <ul class="flex flex-col gap-5">
-                <li><button href="" class="hover:text-p-red">English</button></li>
-                <li><button href="" class="hover:text-p-red">English</button></li>
-                <li><button href="" class="hover:text-p-red">English</button></li>
-                <li><button href="" class="hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
               </ul>
             </div>
             
@@ -59,6 +59,41 @@
       </div>
     </div>
   </header>
+
+  <main class="py-4">
+    <section class="hero relative text-black">
+      <div class="container">
+        <div class="hero-header flex gap-5 items-center justify-between">
+          <h1 class="title text-2xl font-bold w-60 basis-44">Exclusive</h1>
+
+          <div class="hero-header-nav grow shrink">
+            <ul class="text-base flex align-center justify-start gap-10 p-5 ">
+              <li><a href="">Home</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Sign Up</a></li>
+            </ul>
+          </div>
+
+          <div class="header-search shrink-0 flex items-center gap-4">
+            <span class="search-bar bg-slate-50 text-base px-5 py-3 flex gap-5">
+              <input type="text" class="bg-transparent border-none text-sm outline-none caret-p-red" placeholder="What are you looking for?">
+              <i class="fa-solid fa-magnifying-glass bg-transparent h-transition hover:text-p-red"></i>
+            </span>
+            
+            <span class="favorites">
+              <i class="fa-regular fa-heart h-transition hover:text-p-red"></i>
+            </span>
+
+            <span class="add-to-cart">
+              <i class="fa-solid fa-cart-shopping h-transition hover:text-p-red"></i>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
 
   <script type="module" src="/scripts/home/home.js"></script>
 

@@ -31,6 +31,7 @@ input, button, textarea, select {
   font: inherit;
 }
 
+/* UTILITY CLASS */
 .container {
   --max-width: 1280px;
   --padding: 1rem;
@@ -39,10 +40,12 @@ input, button, textarea, select {
   margin-inline: auto;
 }
 
+.h-transition {
+  transition: all .3s ease;
+}
 
 /* HEADER */
 #header-wrapper > p > button, .large-screen button, .small-size button {
-  transition: all .3s ease;
 }
 
 .large-screen:hover > ul {
@@ -62,4 +65,27 @@ input, button, textarea, select {
 
 .small-active.active {
   left: 50%;
+}
+
+/* HERO SECITOn */
+.hero-header-nav ul li{
+  position: relative;
+}
+
+.hero-header-nav ul li::after{
+  position: absolute;
+  content: '';
+  bottom: -1;
+  left: 0;
+  width: 100%;
+  transform: scale(0);
+  height: 2px;
+  background: rgb(168, 168, 168);
+  transition: all .2s linear;
+}
+
+.hero-header-nav ul li:hover::after{ 
+  /* width: 100%; */
+  transform: scale(1);
+  transform-origin: center;
 }
