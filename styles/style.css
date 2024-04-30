@@ -35,5 +35,31 @@ input, button, textarea, select {
   --max-width: 1280px;
   --padding: 1rem;
 
-  width: min(var(--max-width), 100% - var(--padding) * 2);
+  max-width: min(var(--max-width), 100% - var(--padding) * 2);
+  margin-inline: auto;
+}
+
+
+/* HEADER */
+#header-wrapper > p > button, .large-screen button, .small-size button {
+  transition: all .3s ease;
+}
+
+.large-screen:hover > ul {
+  display: flex;
+}
+
+.large-screen > ul {
+  display: none;
+  opacity: .7;
+}
+
+.small-active {
+  left: 101%;
+  right: 0;
+  transition: all .5s linear;
+}
+
+.small-active.active {
+  left: 50%;
 }

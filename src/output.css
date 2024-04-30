@@ -588,6 +588,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -596,21 +600,48 @@ video {
   position: relative;
 }
 
-.right-10 {
-  right: 2.5rem;
+.bottom-0 {
+  bottom: 0px;
 }
 
-.right-5 {
-  right: 1.25rem;
+.left-0 {
+  left: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-2 {
+  right: 0.5rem;
+}
+
+.right-2\.5 {
+  right: 0.625rem;
+}
+
+.top-0 {
+  top: 0px;
 }
 
 .top-5 {
   top: 1.25rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.left-full {
+  left: 100%;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.block {
+  display: block;
 }
 
 .flex {
@@ -621,60 +652,24 @@ video {
   display: none;
 }
 
-.h-9 {
-  height: 2.25rem;
-}
-
-.h-36 {
-  height: 9rem;
-}
-
-.h-20 {
-  height: 5rem;
-}
-
-.h-14 {
-  height: 3.5rem;
-}
-
 .h-12 {
   height: 3rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-24 {
   width: 6rem;
 }
 
-.w-8 {
-  width: 2rem;
+.w-9\/12 {
+  width: 75%;
 }
 
-.w-48 {
-  width: 12rem;
-}
-
-.grow {
-  flex-grow: 1;
-}
-
-.basis-2 {
-  flex-basis: 0.5rem;
-}
-
-.basis-5 {
-  flex-basis: 1.25rem;
-}
-
-.basis-10 {
-  flex-basis: 2.5rem;
-}
-
-.basis-96 {
-  flex-basis: 24rem;
-}
-
-.basis-52 {
-  flex-basis: 13rem;
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-col {
@@ -689,56 +684,16 @@ video {
   justify-content: flex-start;
 }
 
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.gap-3 {
-  gap: 0.75rem;
+.gap-2 {
+  gap: 0.5rem;
 }
 
 .gap-5 {
   gap: 1.25rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
-.gap-12 {
-  gap: 3rem;
-}
-
-.gap-14 {
-  gap: 3.5rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.border-0 {
-  border-width: 0px;
+.self-end {
+  align-self: flex-end;
 }
 
 .bg-black {
@@ -746,82 +701,17 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
-.bg-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(187 247 208 / var(--tw-bg-opacity));
-}
-
-.bg-slate-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
-
-.bg-slate-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
-}
-
-.bg-slate-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
-.bg-slate-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .text-start {
@@ -830,6 +720,16 @@ video {
 
 .text-end {
   text-align: end;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-sm {
@@ -842,33 +742,8 @@ video {
   line-height: 1.75rem;
 }
 
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .font-bold {
   font-weight: 700;
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -880,7 +755,45 @@ video {
   text-decoration-line: underline;
 }
 
+.opacity-80 {
+  opacity: 0.8;
+}
+
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.hover\:text-p-red:hover {
+  --tw-text-opacity: 1;
+  color: rgb(219 68 68 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
 }

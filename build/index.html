@@ -11,14 +11,56 @@
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
-<body>
+<body>  
 
-  <header id="header" class="bg-black h-52 w-52">
+  <header id="header" class="bg-black text-white text-sm fixed h-12 right-0 left-0 py-10 sm:py-2">
     <div class="container">
-      
-      
+      <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
+        <p class="text-start w-9/12 md:text-center md:w-full">
+          <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%</span>
+          <button class="text-white text-sm underline outline-none font-bold hover:text-p-red">ShopNow</button>
+        </p>
+
+        <div class="language-selector absolute right-0">
+          <div class="hidden md:block large-screen cursor-pointer hover:text-p-red">
+            <button class="mr-1">English</button>
+
+            <ul class="absolute top-5 right-2.5 p-2 text-end w-24 bg-black text-white flex-col gap-2">
+              <li><button href="" class="hover:text-p-red">English</button></li>
+              <li><button href="" class="hover:text-p-red">English</button></li>
+              <li><button href="" class="hover:text-p-red">English</button></li>
+              <li><button href="" class="hover:text-p-red">English</button></li>
+            </ul>
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+          <div class="small-size block md:hidden">
+            <button class="select-language hover:text-p-red">
+              <i class="fa-solid fa-globe text-2xl"></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="small-active fixed bottom-0 top-0 text-xl p-5 opacity-80 bg-black flex gap-5 flex-col">
+              <button class="exit-language self-end hover:text-p-red">
+                <i class="fa-solid fa-xmark text-end text-3xl"></i>
+              </button>
+
+              <ul class="flex flex-col gap-5">
+                <li><button href="" class="hover:text-p-red">English</button></li>
+                <li><button href="" class="hover:text-p-red">English</button></li>
+                <li><button href="" class="hover:text-p-red">English</button></li>
+                <li><button href="" class="hover:text-p-red">English</button></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     </div>
   </header>
+
+  <script type="module" src="/scripts/home/home.js"></script>
 
 </body>
 </html>
