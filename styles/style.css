@@ -53,9 +53,6 @@ input, button, textarea, select {
 }
 
 /* HEADER */
-#header-wrapper > p > button, .large-screen button, .small-size button {
-}
-
 .large-screen:hover > ul {
   display: flex;
 }
