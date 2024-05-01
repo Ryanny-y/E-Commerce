@@ -65,34 +65,37 @@
   </header>
 
   <main class="py-4 flex flex-col gap-20">
-    <section class="hero relative text-black">
+    <!-- HERO SECtION -->
+    <section id="hero" class="hero relative text-black">
       <section id="hero-header">
         <div class="container sticky top-0">
-          <div class="hero-header flex gap-1 items-center justify-between flex-wrap md:gap-5">
+          <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
             <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
             
-            <div class="hero-header-nav w-full md:grow md:shrink md:w-0">
-              <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:p-5 md:justify-start lg:text-base lg:pl-16">
+            <div class="hero-header-nav w-full grow md:w-0">
+              <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
                 <li><a href="">Home</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">About</a></li>
                 <li><a href="">Sign Up</a></li>
               </ul>
             </div>
-  
-            <div class="header-search text-xs shrink-0 flex items-center gap-4 justify-center w-full sm:text-sm md:w-0 md:justify-end">
-              <span class="search-bar bg-neutral-100 text-xs px-5 py-2 flex items-center gap-5 sm:text-sm md:text-base md:px-3">
-                <input type="text" class="bg-transparent border-none text-sm outline-none caret-p-red" placeholder="What are you looking for?">
-                <i class="fa-solid fa-magnifying-glass bg-transparent h-transition hover:text-p-red"></i>
+            
+            <div class="header-search flex items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
+              <span class="search-bar bg-neutral-100 flex items-center w-full justify-between md:w-56 relative px-5 py-2 md:shrink">
+                <input type="text" class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
+                <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
               </span>
-              
-              <span class="wishlist">
-                <i class="fa-regular fa-heart h-transition hover:text-p-red"></i>
-              </span>
-  
-              <span class="add-to-cart">
-                <i class="fa-solid fa-cart-shopping h-transition hover:text-p-red"></i>
-              </span>
+
+              <div class="flex gap-5">
+                <span class="wishlist">
+                  <i class="fa-regular fa-heart h-transition hover:text-p-red"></i>
+                </span>
+    
+                <span class="add-to-cart">
+                  <i class="fa-solid fa-cart-shopping h-transition hover:text-p-red"></i>
+                </span>
+              </div>
             </div>
   
           </div>
@@ -205,6 +208,7 @@
       </section>
     </section>
     
+    <!-- FLASH SALES / TODAYS PRODUCT SECTION -->
     <section id="todays-product">
       <div class="container">
         <div class="todays-product flex flex-col gap-4">
@@ -412,17 +416,95 @@
           </div>          
         </div>
       </div>
-
     </section>
 
+    <!-- PRODUCT CATEGORIES SECTION -->
+    <section id="categories">
+      <div class="container">
+        <div class="categories flex flex-col gap-4">
+          <!-- TITLE -->
+          <div class="category-title relative">
+            <h5 class="text-sm text-p-red font-bold py-1 pl-7">Categories</h5>
+          </div>
+          <!-- BROWSE CATEGORIES -->
+          <div class="browse-categories flex justify-between items-center text-black py-4 gap-8 md:gap-5 flex-wrap">
+            <h1 class="fs-title text-2xl font-bold shrink-0 flex-grow md:text-3xl">Browse Categories</h1>
+
+            <div class="slide-buttons flex gap-3 text-lg justify-end basis-full items-center md:basis-10">
+              <button class="text-gray-900 button-prev h-transition hover:text-p-red"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="text-gray-900 button-next h-transition hover:text-p-red"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- CATEGORIES SLIDER -->
+          <div class="category-types h-42 w-42 relative py-">
+            <div class="swiper categories">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper browse-categories py-5">
+                <!-- Slides -->
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/mobile-phone.png" alt="">
+                    <p>Phones</p>
+                  </div>
+                </a>
+
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/computer.png" alt="">
+                    <p>Computers</p>
+                  </div>
+                </a>
+
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/smart-watch.png" alt="">
+                    <p>SmartWatch</p>
+                  </div>
+                </a>
+
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/camera.png" alt="">
+                    <p>Camera</p>
+                  </div>
+                </a>
+
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/headphone.png" alt="">
+                    <p>HeadPhones</p>
+                  </div>
+                </a>
+
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/console.png" alt="">
+                    <p>Gaming</p>
+                  </div>
+                </a>
+
+                <a href="" class="swiper-slide category-type p-5 border-gray-400 border-2 rounded-sm">
+                  <div class="category-wrapper flex flex-col gap-5 items-center justify-center">
+                    <img class="h-16" src="images/image-icons/keyboard.png" alt="">
+                    <p>Keyboard</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
-  
 
   <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- Javasacript -->
-  <script type="module" src="/scripts/home/home.js"></script>
+  <script type="module" src="scripts/home/home.js"></script>
 </body>
 </html>

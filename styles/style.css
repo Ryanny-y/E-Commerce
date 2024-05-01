@@ -176,12 +176,12 @@ input, button, textarea, select {
 }
 
 /* TODAYS PRODUCt */
-.todays-product .section-title::before {
+.todays-product .section-title::before, .categories .category-title::before{
   position: absolute;
   content: '';
   left: 0;
   top: 0;
-  height: 100%;
+  height: 100%; 
   width: 15px;
   background: var(--red);
   border-radius: 3px;
@@ -243,4 +243,15 @@ input, button, textarea, select {
   .todays-product .view-all-btn {
     margin-top: -10px;
   }
+}
+
+/* CATEGORIES */
+.categories .category-types .browse-categories a:hover {
+  color: white;
+  background: var(--red);
+  transition: all .5s ease;
+}
+
+.categories .category-types .browse-categories a:hover img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(104%) contrast(101%);
 }

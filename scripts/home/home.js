@@ -1,4 +1,5 @@
-import { heroSlider, flashSalesSlider } from "./utils/swiperinit.js";
+// import { heroSlider, flashSalesSlider } from "/utils/swiperinit.js";
+import * as swipers from "../utils/swiperinit.js";
 
 // this function make the header sidebar interactive
 const headerSideBar = () => {
@@ -23,17 +24,10 @@ function renderProducts() {
 
 };
 
-function renderSliders() {
-  heroSlider;
-}
-
 function renderHomePage() {
   
   // Header sidebar
   headerSideBar();
-
-  // sliders
-  renderSliders();
 
   renderProducts();
 
