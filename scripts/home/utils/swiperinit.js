@@ -16,8 +16,9 @@ export const flashSalesSlider = new Swiper('.swiper.flash-sales', {
   loop: false,
 
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+    // if(nextEl.)
   },
   
   breakpoints: {

@@ -17,7 +17,7 @@
 </head>
 <body>
 
-  <header id="header" class="bg-black text-white text-sm sticky h-12 right-0 left-0 py-10 sm:py-2 z-10">
+  <header id="header" class="bg-black text-white text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-10">
     <div class="container">
       <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
         <p class="text-start text-xs w-9/12 md:text-center md:w-full sm:text-xs tracking-wider">
@@ -70,8 +70,9 @@
         <div class="container sticky top-0">
           <div class="hero-header flex gap-1 items-center justify-between flex-wrap md:gap-5">
             <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
+            
             <div class="hero-header-nav w-full md:grow md:shrink md:w-0">
-              <ul class="text-sm flex align-center justify-center gap-10 py-5 md:p-5 md:justify-start lg:text-base lg:pl-16">
+              <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:p-5 md:justify-start lg:text-base lg:pl-16">
                 <li><a href="">Home</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">About</a></li>
@@ -100,15 +101,15 @@
       
       <section id="hero-body" class="py-8">
         <div class="container">
-          <div class="hero-body flex gap-5">
+          <div class="hero-body flex flex-col gap-5 sm:flex-row">
             <div class="hero-body-sidebar relative shrink-0 md:basis-44 text-black pr-4">
               <h1 class="title text-2xl font-bold mb-5 md:hidden">Exclusive</h1>
 
-              <ul class="exclusive-list text-xs flex flex-col items-start w-full sm:text-sm">  
-                <li class="flex items-start justify-start flex-col w-full relative py-2">
+              <ul class="exclusive-list text-xs flex flex-wrap gap-5 items-start w-full sm:text-sm sm:flex-col sm:gap-0">  
+                <li class="flex items-start justify-between flex-col relative w-36 py-2 md:w-full">
                   <a href="">Woman's Fashion</a>
 
-                  <div class="flex flex-col hidden ">
+                  <div class="flex-col hidden ">
                     <span><a href="">Bikini</a></span>
                     <span><a href="">Bikini</a></span>
                     <span><a href="">Bikini</a></span>
@@ -117,7 +118,8 @@
 
                   <i class="fa-solid fa-chevron-right absolute right-0 top-3"></i>
                 </li>
-                <li class="flex items-center justify-between w-full relative py-2">
+                
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full">
                   <a href="">Men's Fashion</a>
 
                   <div class="absolute top-9 left-0 pl-4 right-0 flex flex-col hidden">
@@ -129,17 +131,18 @@
 
                   <i class="fa-solid fa-chevron-right"></i>
                 </li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Electronics</a></li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Home & Styles</a></li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Medicine</a></li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Sports & Outdoors</a></li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Baby's & Toys</a></li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Grocery & Pets</a></li>
-                <li class="flex items-center justify-between w-full relative py-2"><a href="">Health & Beauty</a></li>
+
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Electronics</a></li>
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Home & Styles</a></li>
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Medicine</a></li>
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Sports & Outdoors</a></li>
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Baby's & Toys</a></li>
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Grocery & Pets</a></li>
+                <li class="flex items-center justify-between relative w-36 py-2 md:w-full"><a href="">Health & Beauty</a></li>
               </ul>
             </div>
 
-            <div class="swiper hero-slider w-4/5 mx-auto h-85 md:h-80">
+            <div class="swiper hero-slider w-full mx-auto h-85 md:h-80 md:w-4/5">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -211,7 +214,7 @@
           </div>
           
           <!-- FLASH SALES -->
-          <div class="flash-sales flex justify-between items-end text-black py-4 gap-5 flex-wrap">
+          <div class="flash-sales flex justify-between items-center text-black py-4 gap-8 md:gap-5 flex-wrap">
             <h1 class="fs-title text-3xl font-bold shrink-0 basis-56">Flash Sales</h1>
 
             <div class="fs-countdown flex text-2xl font-bold gap-10 grow">
@@ -221,10 +224,14 @@
               <span class="seconds pl-1">50</span>
             </div>
 
+            <div class="slide-buttons flex gap-3 text-lg justify-end items-center basis-full md:basis-20">
+              <button class="text-gray-900 button-prev h-transition hover:text-p-red"><i class="fa-solid fa-arrow-left"></i></button>
+              <button class="text-gray-900 button-next h-transition hover:text-p-red"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
           </div>
   
           <!-- SLIDER -->
-          <div class="sale-products h-80 sm:h-85">
+          <div class="sale-products h-80 relative sm:h-85">
             <div class="swiper flash-sales">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
@@ -397,10 +404,6 @@
                   </div>
                 </div>
               </div>
-            
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
             </div>
           </div>
   

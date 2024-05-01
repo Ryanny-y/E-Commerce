@@ -144,9 +144,15 @@ input, button, textarea, select {
   content: '';
   bottom: 0;
   top: -25px;
-  width: 2px;
+  width: 1px;
   right: 0;
   background: rgb(168, 168, 168)
+}
+
+@media (max-width: 640px) {
+  .hero-body-sidebar::after {
+    display: none;
+  }
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
