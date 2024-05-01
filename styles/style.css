@@ -19,6 +19,7 @@ body {
 
 body, h1, h2, h3, h4, h5, p, figure, blockquote {
   margin: 0;
+  letter-spacing: .025em;
 }
 
 ul, ol {
@@ -166,7 +167,77 @@ input, button, textarea, select {
 }
 
 .hero-body a:hover, .hero-body button:hover {
-  transition: all .2s linear;
+  transition: all .25s linear;
   color: var(--red);
   font-weight: bold;
+}
+
+/* TODAYS PRODUCt */
+.todays-product .section-title::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 15px;
+  background: var(--red);
+  border-radius: 3px;
+}
+
+.todays-product .flash-sales .fs-countdown :is(.days, .hours, .minutes, .seconds) {
+  position: relative;
+}
+
+.todays-product .flash-sales .fs-countdown :is(.days, .hours, .minutes, .seconds)::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: -25px;
+  font-size: .65rem;  
+}
+
+.todays-product .flash-sales .fs-countdown :is(.hours, .minutes, .seconds)::after {
+  position: absolute;
+  content: ':';
+  left: -15px;
+  top: 0;
+  color: var(--red);
+  font-size: 1rem;
+}
+
+.todays-product .flash-sales .fs-countdown .days::before {
+  content: 'Days'; 
+}
+
+.todays-product .flash-sales .fs-countdown .hours::before {
+  content: 'Hours'; 
+}
+
+.todays-product .flash-sales .fs-countdown .minutes::before {
+  content: 'Minutes'; 
+}
+
+.todays-product .flash-sales .fs-countdown .seconds::before {
+  content: 'Seconds'; 
+}
+
+.sale-products .sale-product .product-img-container button {
+  bottom: -40px;
+  transition: all .2s linear;
+}
+
+.sale-products .sale-product .product-img-container:hover button{
+  bottom: 0px;
+}
+
+@media (min-widtH: 640px) {
+  .todays-product .view-all-btn {
+    margin-top: -30px;
+  }
+}
+
+@media (min-widtH: 768px) {
+  .todays-product .view-all-btn {
+    margin-top: -10px;
+  }
 }

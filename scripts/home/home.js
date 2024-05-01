@@ -1,14 +1,4 @@
-// slider
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  },
-});
+import { heroSlider, flashSalesSlider } from "./utils/swiperinit.js";
 
 // this function make the header sidebar interactive
 const headerSideBar = () => {
@@ -33,10 +23,17 @@ function renderProducts() {
 
 };
 
+function renderSliders() {
+  heroSlider;
+}
+
 function renderHomePage() {
   
   // Header sidebar
   headerSideBar();
+
+  // sliders
+  renderSliders();
 
   renderProducts();
 
