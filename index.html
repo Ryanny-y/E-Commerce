@@ -17,6 +17,7 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header id="header" class="bg-black text-white text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-10">
     <div class="container">
       <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
@@ -64,6 +65,7 @@
     </div>
   </header>
 
+  <!-- MAIN SECTION -->
   <main class="py-4 flex flex-col gap-20">
     <!-- HERO SECtION -->
     <section id="hero" class="hero relative text-black">
@@ -72,7 +74,7 @@
           <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
             <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
             
-            <div class="hero-header-nav w-full grow md:w-0">
+            <div class="hero-header-nav w-full sm:min-w-80 grow md:w-0">
               <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
                 <li><a href="">Home</a></li>
                 <li><a href="">Contact</a></li>
@@ -81,19 +83,19 @@
               </ul>
             </div>
             
-            <div class="header-search flex items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
-              <span class="search-bar bg-neutral-100 flex items-center w-full justify-between md:w-56 relative px-5 py-2 md:shrink">
+            <div class="header-search flex grow items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
+              <span class="search-bar bg-neutral-100 flex items-center w-full grow justify-between md:w-56 relative px-5 py-2 md:shrink">
                 <input type="text" class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
                 <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
               </span>
 
               <div class="flex gap-5">
                 <span class="wishlist">
-                  <i class="fa-regular fa-heart h-transition hover:text-p-red"></i>
+                  <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
                 </span>
     
                 <span class="add-to-cart">
-                  <i class="fa-solid fa-cart-shopping h-transition hover:text-p-red"></i>
+                  <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
                 </span>
               </div>
             </div>
@@ -235,13 +237,13 @@
           </div>
   
           <!-- SLIDER -->
-          <div class="sale-products h-80 relative sm:h-85">
+          <div class="sale-products relative sm:h-85">
             <div class="swiper flash-sales">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -265,7 +267,7 @@
                 </div>
 
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -289,7 +291,7 @@
                 </div>
 
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -313,7 +315,7 @@
                 </div>
 
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -337,7 +339,7 @@
                 </div>
 
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -361,7 +363,7 @@
                 </div>
 
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -385,7 +387,7 @@
                 </div>
 
                 <div class="swiper-slide sale-product">
-                  <div class="product-img-container relative w-full overflow-hidden h-56 mb-2">
+                  <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
                     <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
                     <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
                     <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
@@ -428,7 +430,7 @@
           </div>
           <!-- BROWSE CATEGORIES -->
           <div class="browse-categories flex justify-between items-center text-black py-4 gap-8 md:gap-5 flex-wrap">
-            <h1 class="fs-title text-2xl font-bold shrink-0 flex-grow md:text-3xl">Browse Categories</h1>
+            <h1 class="fs-title text-2xl font-bold shrink-1 md:shrink-0 flex-grow md:text-3xl">Browse Categories</h1>
 
             <div class="slide-buttons flex gap-3 text-lg justify-end basis-full items-center md:basis-10">
               <button class="text-gray-900 button-prev h-transition hover:text-p-red"><i class="fa-solid fa-arrow-left"></i></button>
@@ -500,10 +502,167 @@
     </section>
 
     <!-- BEST SELLiNG PRODUCTS SECTION -->
+    <section id="best-selling">
+      <div class="container">
+        <div class="best-selling flex flex-col gap-4">
+          <!-- TITLE -->
+          <div class="best-selling-title relative">
+            <h5 class="text-sm text-p-red font-bold py-1 pl-7">This Month</h5>
+          </div>
+          
+          <!-- BEST SELLING PRODUCTS HEADER-->
+          <div class="best-selling-header flex justify-between items-center flex-wrap gap-5">
+            <h1 class="fs-title text-2xl font-bold md:text-3xl">Best Selling Products</h1>
 
+            <div class="view-all-btn w-full h-full text-end">
+              <a href="" class="m-0 bg-p-red px-5 py-2 text-xs text-white sm:text-sm h-transition hover:bg-black md:px-10 md:py-3">View All</a>
+            </div>
+          </div>
+
+          <!-- BEST SELLING PROUCTS -->
+          <div class="best-selling-container grid gap-10 pt-7 grid-cols-2 md:grid-cols-4">
+            <div class="best-selling-product">
+              <div class="product-img-container relative w-full overflow-hidden h-40 md:h-52 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-white absolute w-full r-0 h-10">Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight text-xs md:text-base">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-xs sm:text-sm md:text-base">$120</p>
+                  <p class="orig-price text-gray-600 line-through text-xs sm:text-sm md:text-base">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-3 sm:h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p class="text-xs sm:text-sm md:text-base" >(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="best-selling-product">
+              <div class="product-img-container relative w-full overflow-hidden h-40 md:h-52 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-white absolute w-full r-0 h-10">Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight text-xs md:text-base">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-xs sm:text-sm md:text-base">$120</p>
+                  <p class="orig-price text-gray-600 line-through text-xs sm:text-sm md:text-base">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-3 sm:h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p class="text-xs sm:text-sm md:text-base" >(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="best-selling-product">
+              <div class="product-img-container relative w-full overflow-hidden h-40 md:h-52 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-white absolute w-full r-0 h-10">Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight text-xs md:text-base">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-xs sm:text-sm md:text-base">$120</p>
+                  <p class="orig-price text-gray-600 line-through text-xs sm:text-sm md:text-base">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-3 sm:h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p class="text-xs sm:text-sm md:text-base" >(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="best-selling-product">
+              <div class="product-img-container relative w-full overflow-hidden h-40 md:h-52 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-white absolute w-full r-0 h-10">Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight text-xs md:text-base">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-xs sm:text-sm md:text-base">$120</p>
+                  <p class="orig-price text-gray-600 line-through text-xs sm:text-sm md:text-base">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-3 sm:h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p class="text-xs sm:text-sm md:text-base" >(88)</p>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- FEATURED PRODUCT SECTION -->
+    <section id="featured-product">
+      <div class="container">
+        <div class="featured-product bg-black w-full relative flex p-10 sm:p-14 md:p-20">
+          <div class="bg-image bg-image rounded-3xl absolute top-10 right-0 min-w-1/2 md:w-5/12 md:right-0 lg:right-20 h-4/5">
+            <img src="/images/products-img/speaker.jpg" class="h-full w-full" alt="">
+          </div>
 
+          <div class="featured-description flex flex-col items-start gap-8 basis-1/2 md:basis-3/5 z-20">
+            <h6 class="text-lime font-bold">Categories</h6>
+
+            <h2 class="text-white text-5xl font-normal leading-tight md:leading-snug md:text-5xl lg:7xl">Enhance Your Music Experience</h2>
+
+            <div class="button-days flex gap-3 md:gap-5 text-black">
+              <p class="Hours flex flex-col gap-0 items-center w-16 h-16 justify-center bg-white rounded-full ">
+                <span class="font-bold text-sm">23</span>
+                <span class="text-xs">Hours</span>
+              </p>
+              
+              <p class="Days flex flex-col gap-0 items-center w-16 h-16 justify-center bg-white rounded-full ">
+                <span class="font-bold text-sm">10</span>
+                <span class="text-xs">Days</span>
+              </p>
+
+              <p class="Minutes flex flex-col gap-0 items-center w-16 h-16 justify-center bg-white rounded-full ">
+                <span class="font-bold text-sm">23</span>
+                <span class="text-xs">Minutes</span>
+              </p>
+
+              <p class="Seconds flex flex-col gap-0 items-center w-16 h-16 justify-center bg-white rounded-full ">
+                <span class="font-bold text-sm">23</span>
+                <span class="text-xs">Seconds</span>
+              </p>
+            </div>
+
+            <button class="buy-now-btn bg-lime px-10 py-3 text-white">Buy Now</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- EXPLORE PRODUCTS SECTION -->
 
@@ -516,6 +675,7 @@
 
   </main>
   <!-- FOOTER -->
+
   
   <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
