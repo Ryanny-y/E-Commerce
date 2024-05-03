@@ -1,3 +1,10 @@
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+
+// import Swiper from 'swiper';
+// import Swiper styles
+// import 'swiper/swiper-bundle.min.css';
+
 // slider
 export const heroSlider = new Swiper('.swiper.hero-slider', {
   // Optional parameters
@@ -38,37 +45,52 @@ export const flashSalesSlider = new Swiper('.swiper.flash-sales', {
       slidesPerView: 2,
       spaceBetween: 10
     },
-
   }
 });
 
-export const categoriesSlider = new Swiper('.swiper.categories', {
-  // Optional parameters
-  loop: false,
-
+export const swiper = new Swiper('.swiper-container', {
+  // slidesPerView: 4,
+  // // slidesPerColumn: 2,
+  // grid: {
+  //   rows: 2,
+  //   fill: 'row'
+  // },
+  spaceBetween: 30,
   navigation: {
-    nextEl: '.browse-categories .button-next',
-    prevEl: '.browse-categories .button-prev',
+    nextEl: '.explore-product-head .button-next',
+    prevEl: '.explore-product-head .button-prev',
     // if(nextEl.)
   },
-  
+
   breakpoints: {
-    1024: {
-      slidesPerView: 6,
+    768: {
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
+      slidesPerView: 4,
       spaceBetween: 30
     },
-    768: {
-      slidesPerView: 5,
-      spaceBetween: 25
-    },
     640: {
-      slidesPerView: 4,
-      spaceBetween: 20
-    },
-    406: {
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
       slidesPerView: 3,
       spaceBetween: 15
     },
+    406: {
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
+      slidesPerView: 2,
+      spaceBetween: 10
+    }, 
+  },
 
-  }
+  grid: {
+    rows: 2,
+    fill: 'row'
+  },
 });

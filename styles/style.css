@@ -178,7 +178,8 @@ input, button, textarea, select {
 /* TODAYS PRODUCt */
 .todays-product .section-title::before, 
 .categories .category-title::before, 
-.best-selling .best-selling-title::before{
+.best-selling .best-selling-title::before,
+.explore-products .explore-title::before {
   position: absolute;
   content: '';
   left: 0;
@@ -227,13 +228,15 @@ input, button, textarea, select {
 }
 
 .sale-products .sale-product .product-img-container button,
-.best-selling .best-selling-product button {
+.best-selling .best-selling-product button,
+.explore-products .explore-product button {
   bottom: -40px;
   transition: all .2s linear;
 }
 
 .sale-products .sale-product .product-img-container:hover button, 
-.best-selling .best-selling-product:hover button{
+.best-selling .best-selling-product:hover button, 
+.explore-products .explore-product:hover button{
   bottom: 0px;
 }
 
@@ -261,3 +264,9 @@ input, button, textarea, select {
 }
 
 /* FEATURED PRODUCT */
+.swiper-container {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
