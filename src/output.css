@@ -660,6 +660,10 @@ video {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -683,10 +687,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .block {
@@ -1168,10 +1168,6 @@ video {
 @media (min-width: 640px) {
   .sm\:top-12 {
     top: 3rem;
-  }
-
-  .sm\:mt-5 {
-    margin-top: 1.25rem;
   }
 
   .sm\:mt-10 {
