@@ -48,13 +48,39 @@ export const flashSalesSlider = new Swiper('.swiper.flash-sales', {
   }
 });
 
-export const swiper = new Swiper('.swiper-container', {
-  // slidesPerView: 4,
-  // // slidesPerColumn: 2,
-  // grid: {
-  //   rows: 2,
-  //   fill: 'row'
-  // },
+export const categoriesSlider = new Swiper('.swiper.categories', {
+  // Optional parameters
+  loop: false,
+
+  navigation: {
+    nextEl: '.browse-categories .button-next',
+    prevEl: '.browse-categories .button-prev',
+    // if(nextEl.)
+  },
+  
+  breakpoints: {
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    406: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+  }
+});
+
+
+export const swiper = new Swiper('.explore-swiper', {
+
   spaceBetween: 30,
   navigation: {
     nextEl: '.explore-product-head .button-next',
@@ -88,7 +114,6 @@ export const swiper = new Swiper('.swiper-container', {
       spaceBetween: 10
     }, 
   },
-
   grid: {
     rows: 2,
     fill: 'row'

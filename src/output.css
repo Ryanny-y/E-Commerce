@@ -608,6 +608,10 @@ video {
   bottom: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .bottom-3 {
   bottom: 0.75rem;
 }
@@ -616,8 +620,16 @@ video {
   left: 0px;
 }
 
+.left-10 {
+  left: 2.5rem;
+}
+
 .right-0 {
   right: 0px;
+}
+
+.right-10 {
+  right: 2.5rem;
 }
 
 .right-2 {
@@ -656,12 +668,84 @@ video {
   top: 2.25rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
+.right-1\/2 {
+  right: 50%;
+}
+
+.right-3\/4 {
+  right: 75%;
+}
+
+.right-2\/3 {
+  right: 66.666667%;
+}
+
+.right-1\/3 {
+  right: 33.333333%;
+}
+
 .z-10 {
   z-index: 10;
 }
 
 .z-20 {
   z-index: 20;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-end-4 {
+  grid-column-end: 4;
+}
+
+.col-end-3 {
+  grid-column-end: 3;
+}
+
+.row-span-4 {
+  grid-row: span 4 / span 4;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
+}
+
+.row-start-4 {
+  grid-row-start: 4;
+}
+
+.row-end-4 {
+  grid-row-end: 4;
 }
 
 .m-0 {
@@ -745,6 +829,10 @@ video {
   height: 100%;
 }
 
+.max-h-52 {
+  max-height: 13rem;
+}
+
 .w-0 {
   width: 0px;
 }
@@ -771,6 +859,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .shrink-0 {
@@ -813,8 +905,36 @@ video {
   cursor: pointer;
 }
 
+.grid-flow-row-dense {
+  grid-auto-flow: row dense;
+}
+
+.auto-rows-auto {
+  grid-auto-rows: auto;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-6 {
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1160,6 +1280,10 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
 .hover\:text-p-red:hover {
   --tw-text-opacity: 1;
   color: rgb(219 68 68 / var(--tw-text-opacity));
@@ -1214,6 +1338,10 @@ video {
     gap: 0px;
   }
 
+  .sm\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .sm\:p-14 {
     padding: 3.5rem;
   }
@@ -1242,6 +1370,18 @@ video {
 @media (min-width: 768px) {
   .md\:right-0 {
     right: 0px;
+  }
+
+  .md\:right-1\/3 {
+    right: 33.333333%;
+  }
+
+  .md\:right-1\/2 {
+    right: 50%;
+  }
+
+  .md\:right-full {
+    right: 100%;
   }
 
   .md\:block {
