@@ -84,7 +84,7 @@ input, button, textarea, select {
   left: 0;
   right: 0;
   bottom: -5px;
-  height: 2px;
+  height: 1px;
   background: black;
 }
 

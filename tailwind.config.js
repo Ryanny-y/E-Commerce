@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["*.{html,js}"],
+  content: ['pages/*.{html, js}'],
   theme: {
     extend: {
       colors: {
@@ -8,7 +9,9 @@ module.exports = {
         'lime': '#00FF66'
       },
       spacing: {
-        '85': '22rem'
+        '85': '22rem',
+        '3\/5' : '60%',
+        '2\/5' : '40%',
       }
     },
   },
