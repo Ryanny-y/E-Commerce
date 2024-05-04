@@ -172,7 +172,7 @@ input, button, textarea, select {
 .hero-body a:hover, .hero-body button:hover {
   transition: all .25s linear;
   color: var(--red);
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 /* TODAYS PRODUCt */

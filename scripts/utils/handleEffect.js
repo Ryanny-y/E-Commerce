@@ -1,8 +1,5 @@
-// import { heroSlider, flashSalesSlider } from "/utils/swiperinit.js";
-import * as swipers from "../utils/swiperinit.js";
-
-// this function make the header sidebar interactive
-const headerSideBar = () => {
+// this function make the header sidebar effect/animation
+export const headerSideBar = () => {
   const exitLanguageBtn = document.querySelector('.exit-language');
   const globeBtn = document.querySelector('.select-language')
   const sideBarHeader = document.querySelector('.small-active');
@@ -20,18 +17,14 @@ const headerSideBar = () => {
   })
 }
 
-function renderProducts() {
-
-};
-
-function renderHomePage() {
-  
-  // Header sidebar
-  headerSideBar();
-
-  renderProducts();
-
-}
-
-renderHomePage();
-
+export const sideMenu = () => {
+  const sideMenus = document.querySelectorAll('.hero-body-sidebar ul li i');
+  sideMenus.forEach(menu => {
+    menu.addEventListener('click', (e) => {
+      console.log(menu);
+      const sub = menu.previousElementSibling;
+      sub.classList.toggle('hidden');
+      sub.classList.toggle('flex');
+    });
+  });
+} 
