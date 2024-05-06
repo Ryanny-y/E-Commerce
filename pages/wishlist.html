@@ -1,0 +1,443 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wishlist</title>
+  <!-- styles link -->
+  <link rel="stylesheet" href="../src/output.css">
+  <link rel="stylesheet" href="../styles/wishlist.css">
+
+  <!-- add icon link -->
+  <link rel="icon" href= "../images/outside-icons/logo.png" type="image/ecommerce-icon"/>
+
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- swiper -->
+  <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header" class="bg-black text-xs md:text-sm text-white text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-20">
+    <div class="container">
+      <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
+        <p class="text-start text-xs w-9/12 md:text-center md:w-full sm:text-xs tracking-wider">
+          <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%</span>
+          <button class="text-white text-sm underline outline-none font-bold h-transition hover:text-p-red n">ShopNow</button>
+        </p>
+
+        <div class="language-selector absolute right-0">
+          <div class="hidden md:block large-screen cursor-pointer h-transition hover:text-p-red ">
+            <button class="mr-1">English</button>
+
+            <ul class="absolute top-5 right-2.5 p-2 text-end w-24 bg-black text-white flex-col gap-2">
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+            </ul>
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+          <div class="small-size block md:hidden">
+            <button class="select-language h-transition hover:text-p-red">
+              <i class="fa-solid fa-globe text-lg sm:text-sm"></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="small-active fixed bottom-0 top-0 text-xl p-5 opacity-80 bg-black flex gap-5 flex-col">
+              <button class="exit-language self-end hover:text-p-red">
+                <i class="fa-solid fa-xmark text-end text-3xl"></i>
+              </button>
+
+              <ul class="flex flex-col gap-5">
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="py-4 flex flex-col gap-10">
+    <!-- HERO HEADER SECTION -->
+    <section id="hero-header">
+      <div class="container sticky top-0">
+        <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
+          <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
+          
+          <div class="hero-header-nav w-full sm:min-w-80 grow md:w-0">
+            <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+          </div>
+          
+          <div class="header-search flex grow items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
+            <span class="search-bar bg-neutral-100 flex items-center w-full grow justify-between md:w-56 md:grow-0 relative px-5 py-2 md:shrink">
+              <input type="text" class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
+              <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
+            </span>
+
+            <div class="flex gap-5">
+              <a href="#" class="wishlist">
+                <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
+              </a>
+  
+              <a href="" class="add-to-cart">
+                <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="wishlist">
+      <div class="container">
+        <div class="wishlist flex flex-col gap-5">
+          <div class="wishlist-head text-black flex justify-between items-center ">
+            <p class="font-semibold text-base">
+              <span>Wishlist</span>
+              (<span class="wishlist-count">4</span>)
+            </p>
+
+            <button class="border text-sm border-gray-400 py-3 px-10 font-semibold">Move All To Cart</button>
+          </div>
+
+          <!-- ITEMS CONTAINER -->
+          <div class="wishlist-item-container">
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+
+            <div class="wishlist-product">
+              <div class="product-img-container relative w-full h-48 md:h-56 mb-2">
+                <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-40%</p>
+                <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
+                <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+                <img class="h-full w-full" src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="">
+                <button class="bg-black text-xs md:text-sm rounded-t-md absolute bottom-0 right-0 left-0 h-10 text-white add-to-cart-btn h-transition hover:bg-p-red">
+                  <i class="fa-solid fa-cart-shopping h-transition mr-0 md:mr-2 md:text-sm hover:text-p-red"></i>
+                  Add to Cart</button>
+              </div>
+              
+              <div class="product-description flex flex-col gap-1">
+                <h2 class="product-name tracking-tight">Pro Wireless Headphones</h2>
+
+                <span class="product-price flex gap-4 items-center">
+                  <p class="discounted-price text-p-red text-base">$120</p>
+                  <p class="orig-price text-gray-600 text-base line-through">$160</p>
+                </span>
+
+                <span class="ratings flex items-center h-4">
+                  <img class="rating-star h-full" src="/images/ratings/rating-50.png" alt="">
+                  <p>(88)</p>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- SWIPER -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

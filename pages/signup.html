@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sign Up</title>
 
   <!-- styles link -->
   <link rel="stylesheet" href="../src/output.css">
@@ -77,7 +77,7 @@
           
           <div class="hero-header-nav w-full sm:min-w-80 grow md:w-0">
             <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
-              <li><a href="/index.html">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="">Contact</a></li>
               <li><a href="">About</a></li>
               <li><a href="/pages/signup.html">Sign Up</a></li>
@@ -91,13 +91,13 @@
             </span>
 
             <div class="flex gap-5">
-              <span class="wishlist">
+              <a href="wishlist.html" class="wishlist">
                 <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
-              </span>
+              </a>
   
-              <span class="add-to-cart">
+              <a href="" class="add-to-cart">
                 <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
-              </span>
+              </a>
             </div>
           </div>
 
@@ -108,7 +108,7 @@
     <section id="signup" class="py-20 relative">
       <div class="container flex items-center justify-center md:justify-end">
 
-        <div class="side-img absolute top-0 bottom-0 left-0 md:right-0 lg:right-1/2 -z-10">
+        <div class="side-img absolute top-0 bottom-0 left-0 sm:right-0 lg:right-1/2 -z-10">
           <img src="../images/outside-icons/sideimage.png" class="w-full h-full" alt="">
         </div>
 
@@ -118,11 +118,11 @@
           <form action="" class="signUp-form flex flex-col gap-10">
             <p class="text-sm mb-2">Enter your details below</p>
 
-            <input type="text" placeholder="Name" class="pb-2 border-b border-gray-500 outline-none text-sm">
+            <input type="text" required placeholder="Name" class="pb-2 border-b border-gray-500 outline-none text-sm">
 
-            <input type="text" placeholder="Email or Phone Number" class="pb-2 border-b border-gray-500 outline-none text-sm">
+            <input type="text" required placeholder="Email or Phone Number" class="pb-2 border-b border-gray-500 outline-none text-sm">
 
-            <input type="text" placeholder="Password" class="pb-2 border-b border-gray-500 outline-none text-sm">
+            <input type="text" required placeholder="Password" class="pb-2 border-b border-gray-500 outline-none text-sm">
 
             <button type="submit" class="bg-p-red text-white text-sm py-3 rounded-sm h-transition hover:bg-black">Create Account</button>
 
@@ -133,7 +133,7 @@
 
             <p class="text-sm flex flex-col sm:flex-row items-center gap-3 justify-center">
               <span>Already have account?</span>
-              <button type="button" class="hover:text-p-red">Log in</button>
+              <a href="login.html" class="hover:text-p-red">Log in</a>
             </p>
           </form>
         </div>
@@ -163,7 +163,7 @@
         <div class="flex flex-col gap-4">
           <h2 id="title" class="font-bold text-lg">Account</h2>
           <a href="">My Account</a>
-          <a href="">Login / Register</a>
+          <a href="login.html">Login / Register</a>
           <a href="">Cart</a>
           <a href="">Wishlist</a>
           <a href="">Shop</a>
@@ -198,6 +198,6 @@
       </div>
     </div>
   </footer>
-
+  
 </body>
 </html>

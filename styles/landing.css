@@ -126,6 +126,11 @@ input, button, textarea, select {
 }
 
 /* HERO BODY */
+#hero-body {
+  margin-top: -50px; 
+}
+
+
 .voucher-text button::after {
   position: absolute;
   content: '';
