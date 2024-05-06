@@ -73,12 +73,34 @@ input, button, textarea, select {
 }
 
 /* WISHLIST CONTAINER */
-.wishlist-item-container {
+.wishlist-item-container, .just-for-you-item-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(233px, 1fr));
   gap: 30px;
 }
 
+@media (max-width: 525px) {
+  .wishlist-item-container, .just-for-you-item-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 330px) {
+  .wishlist-item-container, .just-for-you-item-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.just-for-you-head p::before {
+  position: absolute;
+  content: '';
+  width: 15px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--red);
+  border-radius: 2px;
+}
 
 /* FOOTER */
 #footer a {
