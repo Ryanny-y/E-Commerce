@@ -2,22 +2,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-
-  <!-- styles link -->
+  <title>Cart</title>
   <link rel="stylesheet" href="../src/output.css">
-  <link rel="stylesheet" href="../styles/signup.css">
+  <link rel="stylesheet" href="../styles/cart.css">
 
   <!-- add icon link -->
   <link rel="icon" href= "../images/outside-icons/logo.png" type="image/ecommerce-icon"/>
 
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
 </head>
 <body>
-  
+
   <!-- HEADER -->
-  <header id="header" class="bg-black text-white text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-20">
+  <header id="header" class="bg-black text-xs md:text-sm text-white sm:text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-20">
     <div class="container">
       <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
         <p class="text-start text-xs w-9/12 md:text-center md:w-full sm:text-xs tracking-wider">
@@ -63,11 +62,10 @@
       </div>
     </div>
   </header>
-  
-  <!-- MAIN -->
-  <main class="py-4 flex flex-col gap-10">
-    <!-- SEARCH CONTAINER -->
-    <section id="hero-header">
+
+  <main class="pt-4 pb-28 flex flex-col gap-10">
+    <!-- MAIN HEADER -->
+    <section id="hero-header" class="relative">
       <div class="container sticky top-0">
         <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
           <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
@@ -77,7 +75,7 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="">Contact</a></li>
               <li><a href="">About</a></li>
-              <li><a href="/pages/signup.html">Sign Up</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
             </ul>
           </div>
           
@@ -88,7 +86,7 @@
             </span>
 
             <div class="flex gap-5">
-              <a href="wishlist.html" class="wishlist">
+              <a href="#" class="wishlist">
                 <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
               </a>
   
@@ -101,43 +99,99 @@
         </div>
       </div>
     </section>
-      
-    <section id="signup" class="py-20 relative">
-      <div class="container flex items-center justify-center md:justify-end">
 
-        <div class="side-img absolute top-0 bottom-0 left-0 right-0 lg:right-1/2 -z-10">
-          <img src="../images/outside-icons/sideimage.png" class="w-full h-full" alt="">
+    <!-- CART ITEM -->
+    <section id="cart-container">
+      <div class="container">
+        <div class="cart-container flex flex-col gap-10">
+          <div class="cart-header">
+            <p class="text-xs">Home / <span class="font-semibold">Cart</span></p>
+          </div>
+
+          <div class="cart-item-wrapper flex flex-col gap-10 w-11/12 mx-auto">
+            <div class="labels text-sm justify-items-center md:justify-items-start grid grid-cols-3 md:grid-cols-4">
+              <p>Product</p>
+              <p class="hidden md:block" >Price</p>
+              <p class="justify-self-end sm:justify-self-center md:justify-self-start" >Quantity</p>
+              <p class="justify-self-end sm:justify-self-center md:justify-self-start" >Subtotal</p>
+            </div>
+
+            <div class="product text-xs grid grid-cols-3 items-center justify-items-center md:justify-items-start md:grid-cols-4">
+              <div class="product flex items-center gap-2 relative">
+                <img src="../images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" class="product-img h-16 w-16" alt="">
+                <p class="product-name">LCD Monitor</p>
+                <p class="product-price absolute bottom-0 md:static md:hidden" style="left: 70px;">$650</p>
+              </div>
+              <p class="product-price hidden md:block">$650</p>
+              <input type="number" min="1" value="1" class="w-11 sm:w-14 border border-gray-400 p-2 outline-gray-400 justify-self-end sm:justify-self-center md:justify-self-star">
+              <p class="justify-self-end sm:justify-self-center md:justify-self-star">$650</p> 
+            </div>
+
+            <div class="product text-xs grid grid-cols-3 items-center justify-items-center md:justify-items-start md:grid-cols-4">
+              <div class="product flex items-center gap-2 relative">
+                <img src="../images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" class="product-img h-16 w-16" alt="">
+                <p class="product-name">LCD Monitor</p>
+                <p class="product-price absolute bottom-0 md:static md:hidden" style="left: 70px;">$650</p>
+              </div>
+              <p class="product-price hidden md:block">$650</p>
+              <input type="number" min="1" value="1" class="w-11 sm:w-14 border border-gray-400 p-2 outline-gray-400 justify-self-end sm:justify-self-center md:justify-self-star">
+              <p class="justify-self-end sm:justify-self-center md:justify-self-star">$650</p> 
+            </div>
+
+            <div class="product text-xs grid grid-cols-3 items-center justify-items-center md:justify-items-start md:grid-cols-4">
+              <div class="product flex items-center gap-2 relative">
+                <img src="../images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" class="product-img h-16 w-16" alt="">
+                <p class="product-name">LCD Monitor</p>
+                <p class="product-price absolute bottom-0 md:static md:hidden" style="left: 70px;">$650</p>
+              </div>
+              <p class="product-price hidden md:block">$650</p>
+              <input type="number" min="1" value="1" class="w-11 sm:w-14 border border-gray-400 p-2 outline-gray-400 justify-self-end sm:justify-self-center md:justify-self-star">
+              <p class="justify-self-end sm:justify-self-center md:justify-self-star">$650</p> 
+            </div>
+          </div>
+
+          <div class="cart-action-btn flex items-center justify-between w-11/12 mx-auto">
+            <button class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Return To Shop</button>
+            <button class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Update Cart</button>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="form w-85 mr-0 md:mr-24 2xl:mr-10 bg-white p-10">
-          <h1 class="text-black text-2xl font-semibold tracking-wider mb-2">Create an account</h1>
+    <!-- CHECKOUT CART -->
+    <section id="checkout-cart">
+      <div class="container">
+        <div class="checkout-cart w-11/12 mx-auto flex items-start justify-between gap-10 flex-wrap">
+          <div class="coupon flex items-center gap-3 basis-full flex-grow md:basis-2/5 flex-wrap">
+            <input type="text" class="input-coupon border-2 border-gray-400 px-4 py-3 text-xs rounded-sm grow md:grow-0" placeholder="Coupon Code">
+            <button class="text-white bg-p-red text-xs px-5 py-3 md:px-10 rounded-sm h-transition hover:bg-black grow">Apply Coupon</button>
+          </div>
 
-          <form action="" class="signUp-form flex flex-col gap-10">
-            <p class="text-sm mb-2">Enter your details below</p>
-
-            <input type="text" required placeholder="Name" class="pb-2 border-b border-gray-500 outline-none text-sm">
-
-            <input type="text" required placeholder="Email or Phone Number" class="pb-2 border-b border-gray-500 outline-none text-sm">
-
-            <input type="text" required placeholder="Password" class="pb-2 border-b border-gray-500 outline-none text-sm">
-
-            <button type="submit" class="bg-p-red text-white text-sm py-3 rounded-sm h-transition hover:bg-black">Create Account</button>
-
-            <button type="button" class="flex items-center justify-center gap-2 border-gray-400 rounded-sm border py-3 h-transition hover:bg-p-red hover:text-white" style="margin-top: -15px;"> 
-              <img src="../images/outside-icons/google-icon.png" class="w-5 h-5" alt=""> 
-              <span class="text-sm">Sign up with Google</span>
-            </button>
-
-            <p class="text-sm flex flex-col sm:flex-row items-center gap-3 justify-center">
-              <span>Already have account?</span>
-              <a href="login.html" class="hover:text-p-red">Log in</a>
+          <div class="checkout-wrapper flex flex-col p-5 rounded-md gap-7 justify-center items-start border-2 border-gray-600 basis-full md:basis-2/5"> 
+            <h6 class="text-lg font-semibold">Cart Total</h6>
+            
+            <p class="text-sm flex justify-between w-full relative" id="subtotal">
+              <span>Subtotal:</span>
+              <span class="subtotal">$1750</span>
             </p>
-          </form>
+
+            <p class="text-sm flex justify-between w-full relative" id="shipping">
+              <span>Shipping:</span>
+              <span class="shipping">FREE</span>
+            </p>
+
+            <p class="text-sm flex justify-between w-full relative" id="total">
+              <span>Total:</span>
+              <span class="total">$1750</span>
+            </p>
+            
+            <button class="self-center text-sm font-normal bg-p-red text-white px-7 py-3 rounded-sm h-transition hover:bg-black" style="margin-top: -10px;">Proceed to checkout</button>
+          </div>
+
         </div>
       </div>
     </section>
   </main>
-
   <!-- FOOTER -->
   <footer id="footer" class="bg-black py-16">
     <div class="container">
@@ -195,6 +249,6 @@
       </div>
     </div>
   </footer>
-  
+
 </body>
 </html>

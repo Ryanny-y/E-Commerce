@@ -130,7 +130,6 @@ input, button, textarea, select {
   margin-top: -50px; 
 }
 
-
 .voucher-text button::after {
   position: absolute;
   content: '';
