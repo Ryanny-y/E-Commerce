@@ -2,16 +2,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cart</title>
+  <title>CheckOut</title>
+  <!-- CSS LINK -->
   <link rel="stylesheet" href="../src/output.css">
-  <link rel="stylesheet" href="../styles/cart.css">
+  <link rel="stylesheet" href="../styles/checkout.css">
 
   <!-- add icon link -->
   <link rel="icon" href= "../images/outside-icons/logo.png" type="image/ecommerce-icon"/>
 
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-
 </head>
 <body>
 
@@ -63,6 +63,7 @@
     </div>
   </header>
 
+  <!-- MAIN -->
   <main class="pt-4 pb-28 flex flex-col gap-10">
     <!-- MAIN HEADER -->
     <section id="hero-header" class="relative">
@@ -81,7 +82,7 @@
           
           <div class="header-search flex grow items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
             <span class="search-bar bg-neutral-100 flex items-center w-full grow justify-between md:w-56 md:grow-0 relative px-5 py-2 md:shrink">
-              <input type="text" class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
+              <input type="text" required class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
               <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
             </span>
 
@@ -89,7 +90,7 @@
               <a href="#" class="wishlist">
                 <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
               </a>
-  
+
               <a href="" class="add-to-cart">
                 <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
               </a>
@@ -100,92 +101,138 @@
       </div>
     </section>
 
-    <!-- CART ITEM -->
-    <section id="cart-container">
+    <!-- BILLING DETAILS -->
+    <section id="billing-details">
       <div class="container">
-        <div class="cart-container flex flex-col gap-10">
-          <div class="cart-header">
-            <p class="text-xs">Home / <span class="font-semibold">Cart</span></p>
+        <div class="billing-details flex flex-col gap-12">
+          <!-- BILLInG DETAILS HEAD -->
+          <div class="billing-details-head text-xs text-gray-400 flex items-center gap-8">
+            <a href="" class="relative">Account</a>
+            <a href="" class="relative">My Account</a>
+            <a href="" class="relative">Product</a>
+            <a href="" class="relative">View Cart</a>
+            <a href="" class="text-black relative">CheckOut</a>
           </div>
 
-          <div class="cart-item-wrapper flex flex-col gap-10 w-11/12 mx-auto">
-            <div class="labels text-sm justify-items-center md:justify-items-start grid grid-cols-3 md:grid-cols-4">
-              <p>Product</p>
-              <p class="hidden md:block" >Price</p>
-              <p class="justify-self-end sm:justify-self-center md:justify-self-start" >Quantity</p>
-              <p class="justify-self-end sm:justify-self-center md:justify-self-start" >Subtotal</p>
+          <!-- BILLING DETAILS -->
+          <div class="billing-details-wrapper">
+            <div class="billing-title mb-5">
+              <h1 class="text-3xl font-semibold">Billing Details</h1>
             </div>
 
-            <div class="product text-xs grid grid-cols-3 items-center justify-items-center md:justify-items-start md:grid-cols-4">
-              <div class="product flex items-center gap-2 relative">
-                <img src="../images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" class="product-img h-16 w-16" alt="">
-                <p class="product-name">LCD Monitor</p>
-                <p class="product-price absolute bottom-0 md:static md:hidden" style="left: 70px;">$650</p>
+            <div class="billing-informations flex items-start justify-between gap-20">
+              <form action="" id="billing-form" class="account-information flex flex-col gap-4 basis-1/3">
+                <div class="first-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="first-name">First Name</label>
+                  <input type="text" required id="first-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="company-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="company-name">Company Name</label>
+                  <input type="text" required id="company-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="street-address text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="street-address">street Address</label>
+                  <input type="text" required id="street-address" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="apartment-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="apartment-name">Apartment, floor, etc (optional)</label>
+                  <input type="text" id="apartment-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="city-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="city-name">Town/City</label>
+                  <input type="text" required id="city-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="phone-number text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="number" required id="phone-number" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="email-address text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="email-address">Email Adress</label>
+                  <input type="text" required id="email-address" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <label for="save-information" class="text-xs flex items-center gap-3" >
+                  <input type="checkbox" id="save-information" class="h-5 w-5 accent-p-red text-xs"> 
+                  <span>Save this information for faster check-out next time</span>
+                </label>
+              </form>
+
+              <div class="order-information basis-2/5 flex flex-col gap-7">
+                <!-- ORDER ORDER ITEMS WRAPPER -->
+                <div class="order-items flex flex-col gap-2">
+                  <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
+                    <img src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="" class="h-full">
+                    <p class="flex justify-between w-full">
+                      <span class="product-name">Beats Studio Wireless Headphones</span>
+                      <span class="product-price">$650</span>
+                    </p>
+                  </div>
+
+                  <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
+                    <img src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="" class="h-full">
+                    <p class="flex justify-between w-full">
+                      <span class="product-name">Beats Studio Wireless Headphones</span>
+                      <span class="product-price">$650</span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- PRICING -->
+                <div class="order-pricing flex flex-col gap-8 text-xs md:text-sm font-semibold">
+                  <div class="order-subtotal flex justify-between items-center relative">
+                    <p>Subtotal:</p>
+                    <p>$1750</p>
+                  </div>
+
+                  <div class="order-shipping flex justify-between items-center relative">
+                    <p>Shipping:</p>
+                    <p>FREE</p>
+                  </div>
+                  
+                  <div class="order-total flex justify-between items-center relative">
+                    <p>Total:</p>
+                    <p>$1750</p>
+                  </div>
+
+                  <!-- PAYMENT METHOD -->
+                  <div class="payment-methods flex flex-col gap-8">
+                    <div class="flex justify-between items-center">
+                      <label for="bank" class="flex items-center gap-3">
+                        <input type="radio" form="billing-form" required id="bank" name="payment-method" class="h-5 w-5 accent-black">
+                        <span>Bank</span>
+                      </label>
+
+                      <div class="flex h-3 gap-2">
+                        <img src="/images/outside-icons/bkash-img.png" alt="">
+                        <img src="/images/outside-icons/visa-img.png" alt="">
+                        <img src="/images/outside-icons/mastercard-img.png" alt="">
+                        <img src="/images/outside-icons/nagad-img.png" alt="">
+                      </div>
+                    </div>
+
+                    <label for="cash-on-delivery" class="flex items-center gap-3">
+                      <input type="radio" form="billing-form" required name="payment-method" id="cash-on-delivery" class="h-5 w-5 accent-black">
+                      <span>Cash on delivery</span>
+                    </label>
+                  </div>
+
+                  <div class="coupon flex items-center gap-4">
+                    <input type="text" placeholder="Coupon Code" class="border border-gray-500 rounded-sm outline-none px-5 py-3 flex-grow">
+                    <button type="button" class="bg-p-red text-white outline-none rounded-sm self-stretch px-7 py-3 text-xs">Apply Coupon</button>
+                  </div>
+
+                  <button type="submit" form="billing-form" class="bg-p-red text-white grow-0 outline-none rounded-sm self-stretch w-40 px-7 py-3 text-xs" style="margin-top: -15px;">Place Order</button>
+      
+                </div>
+
               </div>
-              <p class="product-price hidden md:block">$650</p>
-              <input type="number" min="1" value="1" class="w-11 sm:w-14 border border-gray-400 p-2 outline-gray-400 justify-self-end sm:justify-self-center md:justify-self-star">
-              <p class="justify-self-end sm:justify-self-center md:justify-self-star">$650</p> 
             </div>
-
-            <div class="product text-xs grid grid-cols-3 items-center justify-items-center md:justify-items-start md:grid-cols-4">
-              <div class="product flex items-center gap-2 relative">
-                <img src="../images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" class="product-img h-16 w-16" alt="">
-                <p class="product-name">LCD Monitor</p>
-                <p class="product-price absolute bottom-0 md:static md:hidden" style="left: 70px;">$650</p>
-              </div>
-              <p class="product-price hidden md:block">$650</p>
-              <input type="number" min="1" value="1" class="w-11 sm:w-14 border border-gray-400 p-2 outline-gray-400 justify-self-end sm:justify-self-center md:justify-self-star">
-              <p class="justify-self-end sm:justify-self-center md:justify-self-star">$650</p> 
-            </div>
-
-            <div class="product text-xs grid grid-cols-3 items-center justify-items-center md:justify-items-start md:grid-cols-4">
-              <div class="product flex items-center gap-2 relative">
-                <img src="../images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" class="product-img h-16 w-16" alt="">
-                <p class="product-name">LCD Monitor</p>
-                <p class="product-price absolute bottom-0 md:static md:hidden" style="left: 70px;">$650</p>
-              </div>
-              <p class="product-price hidden md:block">$650</p>
-              <input type="number" min="1" value="1" class="w-11 sm:w-14 border border-gray-400 p-2 outline-gray-400 justify-self-end sm:justify-self-center md:justify-self-star">
-              <p class="justify-self-end sm:justify-self-center md:justify-self-star">$650</p> 
-            </div>
-          </div>
-
-          <div class="cart-action-btn flex items-center justify-between w-11/12 mx-auto">
-            <button class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Return To Shop</button>
-            <button class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Update Cart</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CHECKOUT CART -->
-    <section id="checkout-cart">
-      <div class="container">
-        <div class="checkout-cart w-11/12 mx-auto flex items-start justify-between gap-10 flex-wrap">
-          <div class="coupon flex items-center gap-3 basis-full flex-grow md:basis-2/5 flex-wrap">
-            <input type="text" class="input-coupon border-2 border-gray-400 px-4 py-3 text-xs rounded-sm grow md:grow-0" placeholder="Coupon Code">
-            <button class="text-white bg-p-red text-xs px-5 py-3 md:px-10 rounded-sm h-transition hover:bg-black grow">Apply Coupon</button>
-          </div>
-
-          <div class="checkout-wrapper flex flex-col p-5 rounded-md gap-7 justify-center items-start border-2 border-gray-600 basis-full md:basis-2/5"> 
-            <h6 class="text-lg font-semibold">Cart Total</h6>
-            
-            <p class="text-sm flex justify-between w-full relative" id="subtotal">
-              <span>Subtotal:</span>
-              <span class="subtotal">$1750</span>
-            </p>
-
-            <p class="text-sm flex justify-between w-full relative" id="shipping">
-              <span>Shipping:</span>
-              <span class="shipping">FREE</span>
-            </p>
-
-            <p class="text-sm flex justify-between w-full relative" id="total">
-              <span>Total:</span>
-              <span class="total">$1750</span>
-            </p>
-            
-            <a href="checkout.html" class="self-center text-sm font-normal bg-p-red text-white px-7 py-3 rounded-sm h-transition hover:bg-black" style="margin-top: -10px;">Proceed to checkout</a>
           </div>
 
         </div>
@@ -248,7 +295,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> 
 
 </body>
 </html>
