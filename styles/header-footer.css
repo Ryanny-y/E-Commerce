@@ -72,29 +72,15 @@ input, button, textarea, select {
   left: 50%;
 }
 
-.hero-header-nav ul li{
-  position: relative;
-}
-
-.hero-header-nav ul li::after{
+.just-for-you-head p::before {
   position: absolute;
   content: '';
-  bottom: -1;
+  width: 15px;
   left: 0;
-  width: 100%;
-  transform: scale(0);
-  height: 2px;
-  background: rgb(168, 168, 168);
-  transition: all .2s linear;
-}
-
-.hero-header-nav ul li:hover {
-  color: var(--red);
-}
-
-.hero-header-nav ul li:hover::after{ 
-  transform: scale(1);
-  transform-origin: center;
+  top: 0;
+  bottom: 0;
+  background: var(--red);
+  border-radius: 2px;
 }
 
 /* FOOTER */
