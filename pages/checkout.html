@@ -110,7 +110,7 @@
       <div class="container">
         <div class="billing-details flex flex-col gap-12">
           <!-- BILLInG DETAILS HEAD -->
-          <div class="billing-details-head text-xs text-gray-400 flex items-center gap-8">
+          <div class="billing-details-head text-xs text-gray-400 flex items-center gap-8 flex-wrap">
             <a href="" class="relative">Account</a>
             <a href="" class="relative">My Account</a>
             <a href="" class="relative">Product</a>
@@ -124,8 +124,8 @@
               <h1 class="text-3xl font-semibold">Billing Details</h1>
             </div>
 
-            <div class="billing-informations flex items-start justify-between gap-20">
-              <form action="" id="billing-form" class="account-information flex flex-col gap-4 basis-1/3">
+            <div class="billing-informations flex items-start justify-between gap-20 flex-wrap">
+              <form action="" id="billing-form" class="grid grid-cols-2 gap-5 account-information md:flex w-full flex-col md:gap-4 md:basis-1/3">
                 <div class="first-name text-gray-400 text-xs w-full flex flex-col gap-2">
                   <label for="first-name">First Name</label>
                   <input type="text" required id="first-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
@@ -167,7 +167,7 @@
                 </label>
               </form>
 
-              <div class="order-information basis-2/5 flex flex-col gap-7">
+              <div class="order-information basis-full md:basis-2/5 flex flex-col gap-7">
                 <!-- ORDER ORDER ITEMS WRAPPER -->
                 <div class="order-items flex flex-col gap-2">
                   <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
@@ -212,11 +212,11 @@
                         <span>Bank</span>
                       </label>
 
-                      <div class="flex h-3 gap-2">
-                        <img src="/images/outside-icons/bkash-img.png" alt="">
-                        <img src="/images/outside-icons/visa-img.png" alt="">
-                        <img src="/images/outside-icons/mastercard-img.png" alt="">
-                        <img src="/images/outside-icons/nagad-img.png" alt="">
+                      <div class="flex h-3 gap-2 flex-wrap">
+                        <img src="/images/outside-icons/bkash-img.png" alt="" class="h-full">
+                        <img src="/images/outside-icons/visa-img.png" alt="" class="h-full">
+                        <img src="/images/outside-icons/mastercard-img.png" alt="" class="h-full">
+                        <img src="/images/outside-icons/nagad-img.png" alt="" class="h-full">
                       </div>
                     </div>
 
@@ -226,12 +226,12 @@
                     </label>
                   </div>
 
-                  <div class="coupon flex items-center gap-4">
+                  <div class="coupon flex items-center gap-4 flex-wrap">
                     <input type="text" placeholder="Coupon Code" class="border border-gray-500 rounded-sm outline-none px-5 py-3 flex-grow">
-                    <button type="button" class="bg-p-red text-white outline-none rounded-sm self-stretch px-7 py-3 text-xs">Apply Coupon</button>
+                    <button type="button" class="bg-p-red w-full sm:w-44 text-white outline-none rounded-sm self-stretch px-7 py-3 text-xs">Apply Coupon</button>
                   </div>
 
-                  <button type="submit" form="billing-form" class="bg-p-red text-white grow-0 outline-none rounded-sm self-stretch w-40 px-7 py-3 text-xs" style="margin-top: -15px;">Place Order</button>
+                  <button type="submit" form="billing-form" class="bg-p-red w-44 text-white grow-0 outline-none rounded-sm self-stretch  px-7 py-3 text-xs" style="margin-top: -15px;">Place Order</button>
       
                 </div>
 
