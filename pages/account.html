@@ -2,11 +2,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Account</title>
 
   <!-- styles link -->
   <link rel="stylesheet" href="../src/output.css">
-  <link rel="stylesheet" href="../styles/signup.css">
+  <link rel="stylesheet" href="../styles/account.css  ">
 
   <!-- add icon link -->
   <link rel="icon" href= "../images/outside-icons/logo.png" type="image/ecommerce-icon"/>
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 </head>
 <body>
-  
+
   <!-- HEADER -->
   <header id="header" class="bg-black text-white text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-20">
     <div class="container">
@@ -65,9 +65,9 @@
   </header>
   
   <!-- MAIN -->
-  <main class="py-4 flex flex-col gap-10">
-    <!-- SEARCH CONTAINER -->
-    <section id="hero-header">
+  <main class="pt-4 pb-28 flex flex-col gap-10">
+    <!-- MAIN HEADER -->
+    <section id="hero-header" class="relative">
       <div class="container sticky top-0">
         <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
           <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
@@ -77,25 +77,25 @@
               <li><a href="/index.html">Home</a></li>
               <li><a href="">Contact</a></li>
               <li><a href="">About</a></li>
-              <li><a href="/pages/signup.html">Sign Up</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
             </ul>
           </div>
           
           <div class="header-search flex grow items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
             <span class="search-bar bg-neutral-100 flex items-center w-full grow justify-between md:w-56 md:grow-0 relative px-5 py-2 md:shrink">
-              <input type="text" class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
+              <input type="text" required class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
               <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
             </span>
 
             <div class="flex gap-4 items-center">
-              <a href="wishlist.html" class="wishlist">
+              <a href="#" class="wishlist">
                 <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
               </a>
-  
+
               <a href="" class="add-to-cart">
                 <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
               </a>
-              
+
               <a href="pages/cart.html" class="account rounded-full bg-p-red p-2">
                 <i class="fa-solid fa-user text-xs text-white"></i>
               </a>
@@ -105,34 +105,101 @@
         </div>
       </div>
     </section>
-      
-    <section id="signup" class="py-20 relative">
-      <div class="container flex items-center justify-center md:justify-end">
 
-        <div class="side-img absolute top-0 bottom-0 left-0 right-0 lg:right-1/2 -z-10">
-          <img src="../images/outside-icons/sideimage.png" class="w-full h-full" alt="">
-        </div>
+    <!-- ACCOUNT -->
+    <section id="account">
+      <div class="container">
+        <div class="account flex flex-col gap-10">
+          <div class="account-header flex items-center text-xs gap-8">
+            <a href="" class="relative">Home</a>
+            <a href="" class="font-semibold">My Account</a>
+          </div>
 
-        <div class="form w-96 mr-0 md:mr-24 2xl:mr-10 bg-white p-10">
-          <h1 class="text-black text-2xl font-semibold tracking-wider mb-2">Login to Exclusive</h1>
+          <!-- ACCOUNT BODY -->
+          <div class="account-details flex items-start justify-between gap-16 flex-col sm:flex-row rounded-sm">
+            <!-- ACCOUNT SIDEBAR -->
+            <div class="account-sidebar w-full self-center flex-wrap  text-sm flex-row text-start sm:self-start flex sm:flex-col gap-5 sm:basis-1/5">
+              <!-- MANAGE ACCOUNT -->
+              <div class="manage-account flex flex-col gap-2 basis-2/53 shrink-0 flex-grow">
+                <p class="font-semibold" >Manage My Account</p>
 
-          <form action="" class="signUp-form flex flex-col gap-10">
-            <p class="text-sm mb-2">Enter your details below</p>
+                <ul class="text-gray-500 ml-0 sm:ml-5 flex flex-col gap-1">
+                  <li><a href="" class="text-p-red">My Profile</a></li>
+                  <li><a href="">Address Bank</a></li>
+                  <li><a href="">My Payments Option</a></li>
+                </ul>
 
-            <input type="text" required placeholder="Name" class="pb-2 border-b border-gray-500 outline-none text-sm">
+              </div>
+              <!-- MY ORDERS -->
+              <div class="my-orders flex flex-col gap-2 basis-1/3 shrink-0 flex-grow">
+                <p class="font-semibold">My Orders</p>
 
-            <input type="text" required placeholder="Email or Phone Number" class="pb-2 border-b border-gray-500 outline-none text-sm">
+                <ul class="flex flex-col gap-2 ml-0 sm:ml-5 text-gray-500">
+                  <li><a href="">My Returns</a></li>
+                  <li><a href="">My Cancellation</a></li>
+                </ul>
+              </div>
+              <!-- MY WISHLIST -->
+              <div class="my-wishlist flex-grow">
+                <p class="font-semibold">My Wishlist</p>
+              </div>
+            </div>
 
-            <span class="flex items-center justify-between">
-              <button class="text-white bg-p-red py-3 px-10 rounded-sm text-sm">Log In</button>
+            <!-- PROFILE -->
+            <div class="acc-profile-details px-14 py-8 flex flex-grow shadow-md mx-auto">
+              <form action="" id="edit-profile" class="flex flex-col gap-7 text-xs sm:text-sm w-full">
+                <h5 class="text-p-red font-semibold text-lg">Edit Your Profile</h5>
 
-              <a href="signup.html" class="text-p-red text-sm">Forget Password?</a>
-            </span>
-            
-          </form>
+                <div class="general-info grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12" >
+                  <label for="first-name">
+                    <p class="mb-2">First Name</p>
+                    <input type="text" id="first-name" placeholder="Ryanny" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+
+                  <label for="last-name">
+                    <p class="mb-2">Last Name</p>
+                    <input type="text" id="last-name" placeholder="Romero" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+
+                  <label for="email">
+                    <p class="mb-2">Email</p>
+                    <input type="email" id="email" placeholder="ryannymromero@gmail.com" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+
+                  <label for="address">
+                    <p class="mb-2">Address</p>
+                    <input type="text" id="address" placeholder="Kingston, 5230, Philippines" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+                </div>
+
+                <div class="passwords flex flex-col gap-4">
+                  <label for="current-password">
+                    <p class="mb-2">Password</p>
+                    <input type="password" id="current-password" placeholder="Current Password" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+
+                  <label for="new-password">
+                    <input type="password" id="new-password" placeholder="New Password" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+
+                  <label for="confirm-password">
+                    <input type="password" id="confirm-password" placeholder="Confirm Password" class="outline-none bg-gray-100 placeholder:text-gray-500 px-3 py-3 rounded-sm w-full">
+                  </label>
+                </div>
+
+                <div class="buttons flex items-center self-end gap-4">
+                    <button type="button" class="bg-transparent p-3">Cancel</button>
+                    <button type="submit" class="bg-p-red text-white px-9 py-3 rounded-sm">Save Changes</button>
+                </div>
+              </form>
+              
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
@@ -157,7 +224,7 @@
         <div class="flex flex-col gap-4">
           <h2 id="title" class="font-bold text-lg">Account</h2>
           <a href="">My Account</a>
-          <a href="">Login / Register</a>
+          <a href="login.html">Login / Register</a>
           <a href="">Cart</a>
           <a href="">Wishlist</a>
           <a href="">Shop</a>
@@ -191,7 +258,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </footer> 
 
 </body>
 </html>
