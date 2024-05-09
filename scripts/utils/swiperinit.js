@@ -1,10 +1,5 @@
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-
-// import Swiper from 'swiper';
-// import Swiper styles
-// import 'swiper/swiper-bundle.min.css';
-
 // slider
 export const heroSlider = new Swiper('.swiper.hero-slider', {
   // Optional parameters
@@ -79,7 +74,7 @@ export const categoriesSlider = new Swiper('.swiper.categories', {
 });
 
 
-export const swiper = new Swiper('.explore-swiper', {
+export const exploreSwiper = new Swiper('.explore-swiper', {
 
   spaceBetween: 30,
   navigation: {
@@ -118,4 +113,29 @@ export const swiper = new Swiper('.explore-swiper', {
     rows: 2,
     fill: 'row'
   },
+});
+
+export const teamSwiper = new Swiper('.team-swiper', {
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  gap: 50,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    406: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+  }
 });
