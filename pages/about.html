@@ -79,8 +79,8 @@
           <div class="hero-header-nav w-full sm:min-w-80 grow md:w-0">
             <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
               <li><a href="/index.html">Home</a></li>
-              <li><a href="">Contact</a></li>
-              <li><a href="">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="signup.html">Sign Up</a></li>
             </ul>
           </div>
@@ -92,15 +92,15 @@
             </span>
 
             <div class="flex gap-4 items-center">
-              <a href="#" class="wishlist">
+              <a href="wishlist.html" class="wishlist">
                 <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
               </a>
 
-              <a href="" class="add-to-cart">
+              <a href="cart.html" class="add-to-cart">
                 <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
               </a>
 
-              <a href="pages/cart.html" class="account rounded-full bg-p-red p-2">
+              <a href="account.html" class="account rounded-full bg-p-red p-2">
                 <i class="fa-solid fa-user text-xs text-white"></i>
               </a>
             </div>
@@ -329,8 +329,8 @@
     </section>
   </main>
 
-   <!-- FOOTER -->
-   <footer id="footer" class="bg-black py-16">
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-black py-16">
     <div class="container">
       <div class="footer flex gap-14 text-white flex-wrap items-start justify-start sm:justify-center">
         
@@ -338,7 +338,10 @@
           <h2 id="title" class="font-bold text-lg">Exclusive</h2>
           <p class="text-sm font-semibold">Subscribe</p>
           <p class="text-sm">Get 10% off your first order</p>
-          <input type="text" placeholder="Enter your order" class="border border-white text-sm p-2 bg-black rounded-lg">
+          <div class="relative">
+            <i class="fas fa-angle-double-right absolute right-3 top-3 text-lg"></i>
+            <input type="text" placeholder="Enter your email" class="border border-white text-sm p-2 bg-black rounded-lg w-full">
+          </div>
         </div>
 
         <div class="flex flex-col gap-4 basis-60">
@@ -350,10 +353,10 @@
 
         <div class="flex flex-col gap-4">
           <h2 id="title" class="font-bold text-lg">Account</h2>
-          <a href="">My Account</a>
+          <a href="account.html">My Account</a>
           <a href="login.html">Login / Register</a>
-          <a href="">Cart</a>
-          <a href="">Wishlist</a>
+          <a href="cart.html">Cart</a>
+          <a href="wishlist.html">Wishlist</a>
           <a href="">Shop</a>
         </div>
 
@@ -362,7 +365,7 @@
           <a href="">Privacy Policy</a>
           <a href="">Terms Of Use</a>
           <a href="">FAQ</a>
-          <a href="">Contact</a>
+          <a href="contact.html">Contact</a>
         </div>
         
         <div class="flex flex-col gap-4 basis-60">

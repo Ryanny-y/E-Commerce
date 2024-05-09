@@ -22,6 +22,20 @@ body, h1, h2, h3, h4, h5, p, figure, blockquote {
   letter-spacing: .025em;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: transparent;
+  border-top: 100px solid #d6dee1;
+}
+
 ul, ol {
   list-style: none;
 }
