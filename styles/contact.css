@@ -1,0 +1,43 @@
+.contact .contact-header a:first-child::after {
+  position: absolute;
+  content: '/';
+  right: -20px;
+  font-weight: 300;
+}
+
+.right-side .user-info label::after {
+  position: absolute;
+  z-index: 10;
+  content: '*';
+  width: 10px;
+  height: 10px;
+  top: 7px; 
+
+  color: red;
+}
+
+.right-side .user-info label:first-child:after {
+  left: 105px ;
+} 
+
+.right-side .user-info label:nth-child(2):after {
+  left: 102px ;
+}
+
+.right-side .user-info label:nth-child(3):after {
+  left: 106px ;
+}
+
+@media (max-width: 640px) {
+  .right-side .user-info label:first-child:after {
+    left: 93px ;
+  } 
+
+  .right-side .user-info label:nth-child(2):after {
+    left: 90px ;
+  }
+
+  .right-side .user-info label:nth-child(3):after {
+    left: 94px ;
+  }
+}
