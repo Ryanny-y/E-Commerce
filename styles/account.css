@@ -1,6 +1,0 @@
-/* HOME TEXT AFTER */
-.account-header a:first-child::after {
-  content: '/';
-  position: absolute;
-  right: -20px;
-}

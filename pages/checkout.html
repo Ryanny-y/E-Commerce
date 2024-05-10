@@ -6,13 +6,36 @@
   <!-- CSS LINK -->
   <link rel="stylesheet" href="../src/output.css">
   <link rel="stylesheet" href="../styles/header-footer.css">
-  <link rel="stylesheet" href="../styles/checkout.css">
 
   <!-- add icon link -->
   <link rel="icon" href= "../images/outside-icons/logo.png" type="image/ecommerce-icon"/>
 
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  
+  <!-- STYLES -->
+  <style>
+    /* BILLING DETAILS */
+    /* HEAD */
+    .billing-details .billing-details-head a:not(:last-child)::after {
+      position: absolute;
+      content: '/';
+      right: -20px;
+      top: 0;
+    }
+
+    /* ORDER PRICING */
+    .order-pricing .order-subtotal::after,
+    .order-pricing .order-shipping::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -15px;
+      right: 0;
+      height: 1px;
+      background-color: rgb(180, 180, 180);
+    }
+  </style>
 </head>
 <body>
 
