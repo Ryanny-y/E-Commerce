@@ -29,6 +29,7 @@
       content: '/';
       right: -20px;
     }
+
     /* JUST For YOU CONTAINER */
     .related-item-container {
       display: grid;
@@ -118,7 +119,7 @@
         <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
           <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
           
-          <div class="hero-header-nav w-full sm:min-w-80 grow md:w-0">
+          <div class="hero-header-nav w-full sm:min-w-80 grow-0 md:grow md:w-0">
             <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
               <li><a href="/index.html">Home</a></li>
               <li><a href="contact.html">Contact</a></li>
@@ -153,7 +154,7 @@
     </section>
 
     <!-- SMALL HEADER -->
-    <div class="container product-small-header flex items-center gap-8 text-xs" style="margin-top: -40px;">
+    <div class="container product-small-header flex items-center gap-8 text-xs">
       <a href="" class="relative">Account</a>
       <a href="" class="relative">Gaming</a>
       <a href="" class="font-semibold">Hovic HV G-92 Gamepad</a>
@@ -162,14 +163,22 @@
     <!-- PRODUCT DETAILS -->
     <section id="product-details">
       <div class="container">
-        <div class="product-details flex items-start justify-between gap-10" style="height: 540px;">
-          <div class="product-image flex gap-10 flex-grow h-full">
+        <div class="product-details flex items-start justify-center gap-10 flex-wrap">
+          <div class="product-image flex flex-col-reverse md:flex-row gap-10 flex-grow h-full">
             <!-- SMALL IMGS -->
-            <div class="product-small-imgs flex flex-col gap-5 basis-36 justify-between">
-              <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="bg-gray-200 h-36 w-52 p-5 rounded-lg">
-              <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="bg-gray-200 h-36 w-52 p-5 rounded-lg">
-              <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="bg-gray-200 h-36 w-52 p-5 rounded-lg">
-              <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="bg-gray-200 h-36 w-52 p-5 rounded-lg">
+            <div class="product-small-imgs flex gap-5 md:flex-col basis-full md:basis-36 flex-wrap justify-center">
+              <div class="bg-gray-200 p-5 rounded-lg w-28 md:w-40">
+                <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="w-full">
+              </div>
+              <div class="bg-gray-200 p-5 rounded-lg w-28 md:w-40">
+                <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="w-full">
+              </div>
+              <div class="bg-gray-200 p-5 rounded-lg w-28 md:w-40">
+                <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="w-full">
+              </div>
+              <div class="bg-gray-200 p-5 rounded-lg w-28 md:w-40">
+                <img src="/images/products-img/Havic HV G-92 Gamepad.png" alt="" class="w-full">
+              </div>
             </div>
 
             <div class="product-big-img flex items-center bg-gray-200 grow justify-center  rounded-lg">
@@ -177,7 +186,7 @@
             </div>
           </div>
 
-          <div class="product-info flex flex-col gap-5 basis-1/3">
+          <div class="product-info flex flex-col gap-5 basis-full flex-grow md:basis-1/3">
             <!-- TOP -->
             <div class="product-text flex flex-col gap-3 text-xs">
               <p class="name font-semibold text-2xl">Havic HV G-92 Gamepad</p>
@@ -210,22 +219,23 @@
                 <button class="text-sm p-1 w-8 rounded text-center border border-gray-400 h-transition hover:text-white hover:bg-p-red hover:border-p-red" value="xl">XL</button>
               </div>
 
-              <div class="quantities flex items-center h-10 gap-4 mt-2">
-                <div class="product-quantity flex basis-32 items-center text-center border border-gray-400 self-stretch rounded grow">
+              <div class="quantities flex items-center gap-4 mt-2 flex-wrap">
+                <div class="product-quantity flex h-14 md:basis-32 items-center text-center border border-gray-400 self-stretch rounded">
                   <button class="minus h-full border-r-gray-400 border px-3 hover:bg-p-red hover:text-white hover:border-p-red">
                     <i class="fa-solid fa-minus w-full"></i>
                   </button>
-                  <input type="number" value="0" class="w-full text-center outline-none">
+                  <input type="number" value="0" class="text-center outline-none flex-grow">
                   <button class="plus h-full border-l-gray-400 border px-3 hover:bg-p-red hover:text-white hover:border-p-red">
                     <i class="fa-solid fa-plus w-full"></i>
                   </button>
                 </div>
 
-                <button class="text-sm self-stretch px-10 grow rounded text-center bg-p-red text-white h-transition hover:bg-red-400">Buy Now</button>
-                <button class="text-xl self-stretch w-10 rounded text-center border border-gray-400 h-transition hover:bg-p-red hover:text-white hover:border-none"><i class="fa-regular fa-heart"></i></button>
+                <button class="text-sm self-stretch px-10 py-4 rounded text-center bg-p-red whitespace-nowrap text-white h-transition hover:bg-red-400">Buy Now</button>
+                <button class="text-xl self-stretch w-10 py-4 rounded text-center border border-gray-400 h-transition hover:bg-p-red hover:text-white hover:border-none"><i class="fa-regular fa-heart"></i></button>
 
               </div>
             </div>
+            
             <!-- DELIVERY INFO -->
             <div class="delivery-info flex flex-col w-full">
               <div class="free-delivery flex items-center gap-3 py-5 px-3 border border-gray-400 rounded-t-lg">
