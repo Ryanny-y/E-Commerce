@@ -15,6 +15,7 @@ export const products = [
       'joypad',
       'joystick'
     ],
+    category: 'gaming',
     dateAdded: new Date().toJSON().slice(0, 10)
   },
   {
@@ -32,6 +33,7 @@ export const products = [
       'mechanical keyboard',
       'wired keyboard',
     ],
+    categoryP: 'computer',
     dateAdded: new Date().toJSON().slice(0, 10)
   },
   {
@@ -49,6 +51,7 @@ export const products = [
       'Gaming montinor',
       'screen display'
     ],
+    category: 'computer',
     dateAdded: new Date().toJSON().slice(0, 10)
   },
   {
@@ -66,6 +69,7 @@ export const products = [
       'furniture',
       'ergonomic'
     ],
+    category: 'furniture',
     dateAdded: new Date().toJSON().slice(0, 10)
   },
   {
@@ -83,6 +87,7 @@ export const products = [
       'Laptop',
       'Computer'
     ],
+    category: 'computer',
     dateAdded: new Date().toJSON().slice(0, 10)
   },
   {
@@ -100,6 +105,7 @@ export const products = [
       'smartphone',
       'cellphone'
     ],
+    category: 'cellphone',
     dateAdded: new Date().toJSON().slice(0, 10)
   },
   {
@@ -116,7 +122,8 @@ export const products = [
       'smart watch',
       'samsung',
       'watch'
-    ]
+    ],
+    category: 'watch'
   },
   {
     id: '57972769-5210-41c4-90ba-42b4616536f5',
@@ -132,7 +139,8 @@ export const products = [
       'playstation',
       'gaming',
       'console'
-    ]
+    ],
+    category: 'gaming'
   },
   {
     id: '5ce2fefd-e5dc-4c91-9b81-c4b359369cb3',
@@ -148,7 +156,8 @@ export const products = [
       'fashion',
       'outerwear',
       'style'
-    ]
+    ],
+    category: 'fashion'
   },
   {
     id: 'b4445c85-9035-421b-900d-b2018c160a45',
@@ -165,7 +174,8 @@ export const products = [
       'travel',
       'bag',
       'fashion Bag'
-    ]
+    ],
+    category: 'fashion'
   },
   {
     id: '46db07c2-4951-42bd-ba7e-d443ea2cef81',
@@ -183,7 +193,8 @@ export const products = [
       'computer',
       'cooler',
       'rgb cooler'
-    ]
+    ],
+    category: 'computer'
   },
   {
     id: '46db07c2-4951-42bd-ba7e-d443ea2cef81',
@@ -199,7 +210,8 @@ export const products = [
       'book shelf',
       'organizer',
       'storage',
-    ]
+    ],
+    category: 'furniture'
   },
   {
     id: 'bf7f062a-228b-481b-93f9-138f7ebcc073',
@@ -215,7 +227,8 @@ export const products = [
       'dog food',
       'dog nutrition',
       'dog',
-    ]
+    ],
+    category: 'animals'
   },
   {
     id: '5a9a6145-00d2-4cc2-826b-b07d833877a2',
@@ -232,7 +245,8 @@ export const products = [
       'canon',
       'picture',
       'photo',
-    ]
+    ],
+    category: 'camera'
   },
   {
     id: '21f97eca-4358-46c8-9380-917afced7b32',
@@ -249,7 +263,8 @@ export const products = [
       'asus',
       'laptop',
       'gaming',
-    ]
+    ],
+    category: 'computer'
   },
   {
     id: '042ce308-b265-4b9e-8d50-291f0dd8ec69',
@@ -265,7 +280,8 @@ export const products = [
       'skin care',
       'personalized',
       'treatment',
-    ]
+    ],
+    category: 'skin care'
   },
   {
     id: '665b7b10-64f6-4ec0-b0b8-260fe3a3be89',
@@ -278,10 +294,11 @@ export const products = [
     },
     discount: 0,
     keywords: [
-      'skin care',
-      'personalized',
-      'treatment',
-    ]
+      'small car',
+      'car',
+      'kids',
+    ],
+    category: 'toys'
   },
   {
     id: 'ca6e8089-2550-4d3a-9ee7-676d5651a537',
@@ -297,7 +314,8 @@ export const products = [
       'soccer shoes',
       'Lightweight',
       'Agility',
-    ]
+    ],
+    category: 'sports'
   },
   {
     id: 'e7be0ebe-b23a-4fcf-be2a-9e9e3f0e6078',
@@ -314,7 +332,8 @@ export const products = [
       'gaming',
       'joystick',
       'joypad',
-    ]
+    ],
+    category: 'gaming'
   },
   {
     id: '972893a4-886a-4c5d-ac7d-a6d4fef1ccc5',
@@ -331,6 +350,243 @@ export const products = [
       'winter',
       'cpat',
       'leather',
-    ]
+    ],
+    category: 'fashion'
+  },
+  {
+    id: '6a709284-52bf-42fb-8343-b21b8eaedb3e',
+    name: 'HyperX Cloud Alpha',
+    image: 'images/products-img/HyperX Cloud Alpha.png',
+    priceCents: 11489,
+    rating: {
+      stars: 4.5,
+      count: 105
+    },
+    discount: .25,
+    keywords: [
+      'headset',
+      'gaming',
+      'wirless headset',
+      'gaming headset',
+    ],
+    category: 'headset'
+  },
+  {
+    id: 'b239e10a-c102-46b3-931e-dce5ad55fb83',
+    name: 'Corsair HS55 Stereo',
+    image: 'images/products-img/Corsair HS55 Stereo.png',
+    priceCents: 5999,
+    rating: {
+      stars: 4,
+      count: 4061
+    },
+    discount: .15,
+    keywords: [
+      'headset',
+      'gaming',
+      'wirless headset',
+      'gaming headset',
+    ],
+    category: 'headset'
+  },
+  {
+    id: 'b239e10a-c102-46b3-931e-dce5ad55fb83',
+    name: 'DT 900 Pro X',
+    image: 'images/products-img/DT 900 Pro X.png',
+    priceCents: 23299,
+    rating: {
+      stars: 4.5,
+      count: 923
+    },
+    discount: .20,
+    keywords: [
+      'headset',
+      'gaming',
+      'wirless headset',
+      'gaming headset',
+    ],
+    category: 'headset'
+  },
+  {
+    id: '1d12835f-fbee-40b1-9d92-cb2564abb34d',
+    name: 'Audio-Technica ATH-M50xSTS StreamSet',
+    image: 'images/products-img/Audio-Technica ATH-M50xSTS StreamSet.png',
+    priceCents: 19900,
+    rating: {
+      stars: 4.5,
+      count: 82
+    },
+    discount: .30,
+    keywords: [
+      'headset',
+      'gaming',
+      'wirless headset',
+      'gaming headset',
+    ],
+    category: 'headset'
+  },
+  {
+    id: 'bbd198ca-c653-48f8-a955-504c89ff73ef',
+    name: 'Samsung Galaxy S24',
+    image: 'images/products-img/Samsung Galaxy S24.png',
+    priceCents: 165999,
+    rating: {
+      stars: 4.5,
+      count: 5182
+    },
+    discount: .30,
+    keywords: [
+      'cellphone',
+      'phone',
+      'samsung',
+      'camera phone',
+    ],
+    category: 'cellphone'
+  },
+  {
+    id: '73747dd5-b81a-4c6f-84df-5f6fb84d72ae',
+    name: 'HUAWEI Pura 70 Ultra',
+    image: 'images/products-img/HUAWEI Pura 70 Ultra.png',
+    priceCents: 162200,
+    rating: {
+      stars: 4.5,
+      count: 1422
+    },
+    discount: .25,
+    keywords: [
+      'cellphone',
+      'phone',
+      'huawei',
+      'smart phone',
+    ],
+    category: 'cellphone'
+  },
+  {
+    id: '23b5324e-11f3-4fa4-b453-485d78e74017',
+    name: 'Xiaomi Redmi 12C',
+    image: 'images/products-img/Xiaomi Redmi 12C.png',
+    priceCents: 14499,
+    rating: {
+      stars: 4.5,
+      count: 624
+    },
+    discount: .20,
+    keywords: [
+      'cellphone',
+      'phone',
+      'xiami',
+      'redmi',
+      'smart phone',
+    ],
+    category: 'cellphone'
+  },
+  {
+    id: '23b5324e-11f3-4fa4-b453-485d78e74017',
+    name: 'Xiaomi Redmi 12C',
+    image: 'images/products-img/Xiaomi Redmi 12C.png',
+    priceCents: 14499,
+    rating: {
+      stars: 4.5,
+      count: 624
+    },
+    discount: .20,
+    keywords: [
+      'cellphone',
+      'phone',
+      'xiami',
+      'redmi',
+      'smart phone',
+    ],
+    category: 'cellphone'
+  },
+  {
+    id: '23f198e6-4828-4cac-bddf-3c36b9f0a2bd',
+    name: 'Honor X7a',
+    image: 'images/products-img/Honor X7a.png',
+    priceCents: 10929,
+    rating: {
+      stars: 4,
+      count: 514
+    },
+    discount: .30,
+    keywords: [
+      'cellphone',
+      'phone',
+      'honor',
+      'smart phone',
+    ],
+    category: 'cellphone'
+  },  
+  {
+    id: 'ea55bb83-d352-44cc-88e0-e82ffb81fc53',
+    name: 'Intel Core i9-14900k',
+    image: 'images/products-img/Intel Core i9-14900k.png',
+    priceCents: 54899,
+    rating: {
+      stars: 5,
+      count: 142
+    },
+    discount: .15,
+    keywords: [
+      'intel core',
+      'processor',
+      'intel',
+      'gaming processor',
+    ],
+    category: 'computer'
+  },  
+  {
+    id: 'f63216d3-f526-4342-97fc-162f177aaf60',
+    name: 'Intel Core i7-13700',
+    image: 'images/products-img/Intel Core i7-13700.png',
+    priceCents: 37199,
+    rating: {
+      stars: 4.5,
+      count: 3122
+    },
+    discount: .15,
+    keywords: [
+      'intel core',
+      'processor',
+      'intel',
+      'gaming processor',
+    ],
+    category: 'computer'
+  },
+  {
+    id: 'fade02ed-7af9-4385-ad70-6ceaa6318e7d',
+    name: 'Ryzen 5 5600x',
+    image: 'images/products-img/Ryzen 5 5600x.png',
+    priceCents: 14430,
+    rating: {
+      stars: 4.5,
+      count: 1235
+    },
+    discount: .30,
+    keywords: [
+      'ryzen',
+      'processor',
+      'ryzen 5',
+      'gaming processor',
+    ],
+    category: 'computer'
+  },
+  {
+    id: '344ed19b-2faf-4cec-b788-4b1820ecc9f5',
+    name: 'Ryzen 7 7700x',
+    image: 'images/products-img/Ryzen 7 7700x.png',
+    priceCents: 14430,
+    rating: {
+      stars: 4.5,
+      count: 1235
+    },
+    discount: .30,
+    keywords: [
+      'ryzen',
+      'processor',
+      'ryzen 5',
+      'gaming processor',
+    ],
+    category: 'computer'
   },
 ];
