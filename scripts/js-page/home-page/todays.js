@@ -1,5 +1,5 @@
 import { products } from "../../data/products.js"
-import { discountPrice, formatCurrency } from '../../utils/money.js'
+import { discountPrice, formatCurrency, getDiscount } from '../../utils/money.js'
 
 export function renderTodayHTML() {
 
@@ -9,7 +9,7 @@ export function renderTodayHTML() {
       `
       <div class="swiper-slide sale-product">
         <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
-          <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-${product.discount * 100}%</p>
+          <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-${getDiscount(product.discount)}%</p>
           <i class="fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2"></i>
           <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
           <img class="h-full w-full p-10" src="${product.image}" alt="">
@@ -34,5 +34,36 @@ export function renderTodayHTML() {
     ).join('');
 
     const todayProductWrapper = document.querySelector('#js-flash-sale-wrapper');
-    todayProductWrapper.innerHTML += todayHTML;
+    todayProductWrapper.innerHTML = todayHTML;
+  
+    // Flash Sales Slider
+    const flashSalesSlider = new Swiper('.swiper.flash-sales', {
+      // Optional parameters
+      loop: false,
+    
+      navigation: {
+        nextEl: '.flash-sales .button-next',
+        prevEl: '.flash-sales .button-prev',
+        // if(nextEl.)
+      },
+      
+      breakpoints: {
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 20
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 15
+        },
+        406: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
+      }
+    });
 };

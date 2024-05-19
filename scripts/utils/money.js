@@ -5,3 +5,7 @@ export function formatCurrency(priceCents) {
 export function discountPrice(product) {
   return (formatCurrency(product.priceCents) * product.discount).toFixed(2);
 };
+
+export function getDiscount(discount) {
+  return discount.toFixed(2);
+};

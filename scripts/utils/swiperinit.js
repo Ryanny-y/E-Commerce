@@ -12,38 +12,7 @@ export const heroSlider = new Swiper('.swiper.hero-slider', {
   },
 });
 
-// Flash Sales Slider
-export const flashSalesSlider = new Swiper('.swiper.flash-sales', {
-  // Optional parameters
-  loop: false,
-
-  navigation: {
-    nextEl: '.flash-sales .button-next',
-    prevEl: '.flash-sales .button-prev',
-    // if(nextEl.)
-  },
-  
-  breakpoints: {
-    1024: {
-      slidesPerView: 5,
-      spaceBetween: 20
-    },
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 20
-    },
-    640: {
-      slidesPerView: 3,
-      spaceBetween: 15
-    },
-    406: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-  }
-});
-
-export const categoriesSlider = new Swiper('.swiper.categories', {
+const categoriesSlider = new Swiper('.swiper.categories', {
   // Optional parameters
   loop: false,
 
@@ -74,7 +43,7 @@ export const categoriesSlider = new Swiper('.swiper.categories', {
 });
 
 
-export const exploreSwiper = new Swiper('.explore-swiper', {
+const exploreSwiper = new Swiper('.explore-swiper', {
 
   spaceBetween: 30,
   navigation: {
@@ -115,7 +84,7 @@ export const exploreSwiper = new Swiper('.explore-swiper', {
   },
 });
 
-export const teamSwiper = new Swiper('.team-swiper', {
+const teamSwiper = new Swiper('.team-swiper', {
 
   pagination: {
     el: '.swiper-pagination',
@@ -140,7 +109,7 @@ export const teamSwiper = new Swiper('.team-swiper', {
   }
 });
 
-export const productDetailSwiper = new Swiper('.product-detail-swiper', {
+const productDetailSwiper = new Swiper('.product-detail-swiper', {
   // Optional parameters
   // direction: 'vertical',
   // loop: true,
