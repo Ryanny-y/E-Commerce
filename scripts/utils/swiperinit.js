@@ -42,7 +42,7 @@ const categoriesSlider = new Swiper('.swiper.categories', {
   }
 });
 
-const teamSwiper = new Swiper('.team-swiper', {
+export const teamSwiper = new Swiper('.team-swiper', {
 
   pagination: {
     el: '.swiper-pagination',
