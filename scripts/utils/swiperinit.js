@@ -42,48 +42,6 @@ const categoriesSlider = new Swiper('.swiper.categories', {
   }
 });
 
-
-const exploreSwiper = new Swiper('.explore-swiper', {
-
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.explore-product-head .button-next',
-    prevEl: '.explore-product-head .button-prev',
-    // if(nextEl.)
-  },
-
-  breakpoints: {
-    768: {
-      grid: {
-        rows: 2,
-        fill: 'row'
-      },
-      slidesPerView: 4,
-      spaceBetween: 30
-    },
-    640: {
-      grid: {
-        rows: 2,
-        fill: 'row'
-      },
-      slidesPerView: 3,
-      spaceBetween: 15
-    },
-    406: {
-      grid: {
-        rows: 2,
-        fill: 'row'
-      },
-      slidesPerView: 2,
-      spaceBetween: 10
-    }, 
-  },
-  grid: {
-    rows: 2,
-    fill: 'row'
-  },
-});
-
 const teamSwiper = new Swiper('.team-swiper', {
 
   pagination: {
@@ -128,5 +86,76 @@ const productDetailSwiper = new Swiper('.product-detail-swiper', {
   // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
+  },
+});
+
+export const flashSaleSwiper = () => new Swiper('.swiper.flash-sales', {
+  // Optional parameters
+  loop: false,
+
+  navigation: {
+    nextEl: '.flash-sales .button-next',
+    prevEl: '.flash-sales .button-prev',
+    // if(nextEl.)
+  },
+  
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    406: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+  }
+});
+
+export const exploreSwiper = () => new Swiper('.explore-swiper', {
+
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.explore-product-head .button-next',
+    prevEl: '.explore-product-head .button-prev',
+    // if(nextEl.)
+  },
+
+  breakpoints: {
+    768: {
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
+      slidesPerView: 4,
+      spaceBetween: 30
+    },
+    640: {
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    406: {
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
+      slidesPerView: 2,
+      spaceBetween: 10
+    }, 
+  },
+  grid: {
+    rows: 2,
+    fill: 'row'
   },
 });

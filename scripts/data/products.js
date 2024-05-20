@@ -179,8 +179,8 @@ export const products = [
   },
   {
     id: '46db07c2-4951-42bd-ba7e-d443ea2cef81',
-    name: 'RGB liquid CPI Cooler',
-    image: 'images/products-img/RGB liquid CPI Cooler.png',
+    name: 'RGB liquid CPU Cooler',
+    image: 'images/products-img/RGB liquid CPU Cooler.png',
     priceCents: 17000,
     rating: {
       stars: 4.5,
