@@ -26,8 +26,8 @@ export function renderTodayHTML() {
           </span>
 
           <span class="ratings flex items-center h-4">
-            <img class="rating-star h-full" src="images/ratings/rating-${product.rating.stars * 10}.png" alt="">
-            <p>(${product.rating.count})</p>
+            <img class="rating-star h-full" src="${product.getRatingStar()}" alt="">
+            <p>(${product.getRatingCount()})</p>
           </span>
         </div>
       </div>
@@ -66,8 +66,8 @@ export function renderBestSellingHTML() {
           </span>
 
           <span class="ratings flex items-center h-3 sm:h-4">
-            <img class="rating-star h-full" src="images/ratings/rating-${product.rating.stars * 10}.png" alt="">
-            <p class="text-xs sm:text-sm md:text-base" >(${product.rating.count})</p>
+            <img class="rating-star h-full" src="${product.getRatingStar()}" alt="">
+            <p class="text-xs sm:text-sm md:text-base" >(${product.getRatingCount()})</p>
           </span>
         </div>
       </div>
@@ -103,8 +103,8 @@ export function renderExploreProductHTML() {
           </span>
 
           <span class="ratings flex items-center h-4">
-            <img class="rating-star h-full" src="images/ratings/rating-${product.rating.stars * 10}.png" alt="">
-            <p>(${product.rating.count})</p>
+            <img class="rating-star h-full" src="${product.getRatingStar()}" alt="">
+            <p>(${product.getRatingCount()})</p>
           </span>
         </div>
       </div>`

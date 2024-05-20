@@ -1,3 +1,36 @@
+class Product {
+  id;
+  name;
+  image;
+  priceCents;
+  rating;
+  discount;
+  keywords;
+  category;
+  dateAdded;
+
+  constructor(product) {
+    this.id = product.id;
+    this.name = product.name;
+    this.image = product.image;
+    this.priceCents = product.priceCents;
+    this.rating = product.rating;
+    this.discount = product.discount;
+    this.keywords = product.keywords;
+    this.category = product.category;
+    this.dateAdded = product.dateAdded;
+  }
+
+  getRatingStar() {
+    return `images/ratings/rating-${this.rating.stars * 10}.png`;
+  }
+
+  getRatingCount() {
+    return this.rating.count;
+  }
+  
+}
+
 export const products = [
   {
     id: 'a824b81b-8eb2-4829-80bd-90c4bd7faef2',
@@ -589,4 +622,4 @@ export const products = [
     ],
     category: 'computer'
   },
-];
+].map(product => new Product(product));
