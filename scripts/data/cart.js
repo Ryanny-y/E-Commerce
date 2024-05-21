@@ -32,6 +32,11 @@ class Cart {
     return timeoutId;
   }
 
+  calculateCartQuantity() {
+
+  }
+
+  
 }
 
 export const cart = new Cart();

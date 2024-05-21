@@ -408,7 +408,7 @@ export const products = [
     id: 'b239e10a-c102-46b3-931e-dce5ad55fb83',
     name: 'Corsair HS55 Stereo',
     image: 'images/products-img/Corsair HS55 Stereo.png',
-    priceCents: 5999,
+    priceCents: 59999,
     rating: {
       stars: 4,
       count: 4061
