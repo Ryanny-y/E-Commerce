@@ -3,6 +3,7 @@ import * as swipers from "../utils/swiperinit.js";
 import { headerSideBar, sideMenu} from "../utils/handleEffect.js";
 import { renderTodayHTML, renderBestSellingHTML, renderExploreProductHTML } from "./home-page/homeSections.js";
 import { cart } from "../data/cart.js";
+import { displayCartQuantity } from "../utils/reusableComp.js";
 
 function renderHomePage() {
   // For Animations
@@ -18,6 +19,9 @@ function renderHomePage() {
   // EXPLORE PRODUCTS HTML
   renderExploreProductHTML();
 
+  // Render Cart Quantity
+  displayCartQuantity();
+
   // Add To Cart
   const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
   addToCartBtns.forEach(addBtn => {
@@ -30,7 +34,7 @@ function renderHomePage() {
       timeId = cart.addTimeOut(addedPopUp, timeId);
 
       cart.addToCart(productId);
-
+      displayCartQuantity()
     })
   });
 

@@ -33,7 +33,7 @@ class Cart {
   }
 
   calculateCartQuantity() {
-
+    return this.cartItems.reduce((acc, cur) => acc + cur.quantity, 0);
   }
 
   
