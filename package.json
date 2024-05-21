@@ -3,7 +3,10 @@
     "tailwindcss": "^3.4.3"
   },
   "dependencies": {
+<<<<<<< HEAD
     "autoprefixer": "^10.4.19",
+=======
+>>>>>>> 6381a6ff1a5664b8e97fa1c0d7f6a9e8b18c9276
     "swiper": "^11.1.1"
   }
 }
