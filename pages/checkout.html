@@ -1,0 +1,333 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheckOut</title>
+  <!-- CSS LINK -->
+  <link rel="stylesheet" href="../src/output.css">
+  <link rel="stylesheet" href="../styles/header-footer.css">
+
+  <!-- add icon link -->
+  <link rel="icon" href= "../images/outside-icons/logo.png" type="image/ecommerce-icon"/>
+
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  
+  <!-- STYLES -->
+  <style>
+    /* BILLING DETAILS */
+    /* HEAD */
+    .billing-details .billing-details-head a:not(:last-child)::after {
+      position: absolute;
+      content: '/';
+      right: -20px;
+      top: 0;
+    }
+
+    /* ORDER PRICING */
+    .order-pricing .order-subtotal::after,
+    .order-pricing .order-shipping::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: -15px;
+      right: 0;
+      height: 1px;
+      background-color: rgb(180, 180, 180);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header" class="bg-black text-xs md:text-sm text-white sm:text-sm sticky top-0 h-12 right-0 left-0 py-10 sm:py-2 z-20">
+    <div class="container">
+      <div id="header-wrapper" class="flex justify-start items-center h-full relative md:justify-center">
+        <p class="text-start text-xs w-9/12 md:text-center md:w-full sm:text-xs tracking-wider">
+          <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%</span>
+          <button class="text-white text-sm underline outline-none font-bold h-transition hover:text-p-red n">ShopNow</button>
+        </p>
+
+        <div class="language-selector absolute right-0">
+          <div class="hidden md:block large-screen cursor-pointer h-transition hover:text-p-red ">
+            <button class="mr-1">English</button>
+
+            <ul class="absolute top-5 right-2.5 p-2 text-end w-24 bg-black text-white flex-col gap-2">
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+            </ul>
+
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+          <div class="small-size block md:hidden">
+            <button class="select-language h-transition hover:text-p-red">
+              <i class="fa-solid fa-globe text-lg sm:text-sm"></i>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="small-active fixed bottom-0 top-0 text-xl p-5 opacity-80 bg-black flex gap-5 flex-col">
+              <button class="exit-language self-end hover:text-p-red">
+                <i class="fa-solid fa-xmark text-end text-3xl"></i>
+              </button>
+
+              <ul class="flex flex-col gap-5">
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+                <li><button href="" class="h-transition hover:text-p-red">English</button></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="pt-4 pb-28 flex flex-col gap-10">
+    <!-- MAIN HEADER -->
+    <section id="hero-header" class="relative">
+      <div class="container sticky top-0">
+        <div class="hero-header flex gap-3 items-center justify-start flex-wrap  md:gap-5">
+          <h1 class="title text-2xl font-bold w-60 hidden md:block md:basis-24 lg:basis-44" >Exclusive</h1>
+          
+          <div class="hero-header-nav w-full sm:min-w-80 grow md:w-0">
+            <ul class="text-xs flex align-center justify-center gap-10 py-5 sm:text-sm md:py-5 md:justify-start lg:text-base lg:pl-16 text-nowrap">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+          </div>
+          
+          <div class="header-search flex grow items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
+            <span class="search-bar bg-neutral-100 flex items-center w-full grow justify-between md:w-56 md:grow-0 relative px-5 py-2 md:shrink">
+              <input type="text" required class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
+              <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
+            </span>
+
+            <div class="flex gap-4 items-center">
+              <a href="wishlist.html" class="wishlist">
+                <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
+              </a>
+
+              <a href="cart.html" class="add-to-cart">
+                <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
+              </a>
+
+              <a href="account.html" class="account rounded-full bg-p-red p-2">
+                <i class="fa-solid fa-user text-xs text-white"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BILLING DETAILS -->
+    <section id="billing-details">
+      <div class="container">
+        <div class="billing-details flex flex-col gap-12">
+          <!-- BILLInG DETAILS HEAD -->
+          <div class="billing-details-head text-xs text-gray-400 flex items-center gap-8 flex-wrap">
+            <a href="" class="relative">Account</a>
+            <a href="" class="relative">My Account</a>
+            <a href="" class="relative">Product</a>
+            <a href="" class="relative">View Cart</a>
+            <a href="" class="text-black relative">CheckOut</a>
+          </div>
+
+          <!-- BILLING DETAILS -->
+          <div class="billing-details-wrapper">
+            <div class="billing-title mb-5">
+              <h1 class="text-3xl font-semibold">Billing Details</h1>
+            </div>
+
+            <div class="billing-informations flex items-start justify-between gap-20 flex-wrap">
+              <form action="" id="billing-form" class="grid grid-cols-2 gap-5 account-information md:flex w-full flex-col md:gap-4 md:basis-1/3">
+                <div class="first-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="first-name">First Name</label>
+                  <input type="text" required id="first-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="company-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="company-name">Company Name</label>
+                  <input type="text" required id="company-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="street-address text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="street-address">street Address</label>
+                  <input type="text" required id="street-address" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="apartment-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="apartment-name">Apartment, floor, etc (optional)</label>
+                  <input type="text" id="apartment-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="city-name text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="city-name">Town/City</label>
+                  <input type="text" required id="city-name" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="phone-number text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="phone-number">Phone Number</label>
+                  <input type="number" required id="phone-number" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <div class="email-address text-gray-400 text-xs w-full flex flex-col gap-2">
+                  <label for="email-address">Email Adress</label>
+                  <input type="text" required id="email-address" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                </div>
+
+                <label for="save-information" class="text-xs flex items-center gap-3" >
+                  <input type="checkbox" id="save-information" class="h-5 w-5 accent-p-red text-xs"> 
+                  <span>Save this information for faster check-out next time</span>
+                </label>
+              </form>
+
+              <div class="order-information basis-full md:basis-2/5 flex flex-col gap-7">
+                <!-- ORDER ORDER ITEMS WRAPPER -->
+                <div class="order-items flex flex-col gap-2">
+                  <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
+                    <img src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="" class="h-full">
+                    <p class="flex justify-between w-full">
+                      <span class="product-name">Beats Studio Wireless Headphones</span>
+                      <span class="product-price">$650</span>
+                    </p>
+                  </div>
+
+                  <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
+                    <img src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="" class="h-full">
+                    <p class="flex justify-between w-full">
+                      <span class="product-name">Beats Studio Wireless Headphones</span>
+                      <span class="product-price">$650</span>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- PRICING -->
+                <div class="order-pricing flex flex-col gap-8 text-xs md:text-sm font-semibold">
+                  <div class="order-subtotal flex justify-between items-center relative">
+                    <p>Subtotal:</p>
+                    <p>$1750</p>
+                  </div>
+
+                  <div class="order-shipping flex justify-between items-center relative">
+                    <p>Shipping:</p>
+                    <p>FREE</p>
+                  </div>
+                  
+                  <div class="order-total flex justify-between items-center relative">
+                    <p>Total:</p>
+                    <p>$1750</p>
+                  </div>
+
+                  <!-- PAYMENT METHOD -->
+                  <div class="payment-methods flex flex-col gap-8">
+                    <div class="flex justify-between items-center">
+                      <label for="bank" class="flex items-center gap-3">
+                        <input type="radio" form="billing-form" required id="bank" name="payment-method" class="h-5 w-5 accent-black">
+                        <span>Bank</span>
+                      </label>
+
+                      <div class="flex h-3 gap-2 flex-wrap">
+                        <img src="/images/outside-icons/bkash-img.png" alt="" class="h-full">
+                        <img src="/images/outside-icons/visa-img.png" alt="" class="h-full">
+                        <img src="/images/outside-icons/mastercard-img.png" alt="" class="h-full">
+                        <img src="/images/outside-icons/nagad-img.png" alt="" class="h-full">
+                      </div>
+                    </div>
+
+                    <label for="cash-on-delivery" class="flex items-center gap-3">
+                      <input type="radio" form="billing-form" required name="payment-method" id="cash-on-delivery" class="h-5 w-5 accent-black">
+                      <span>Cash on delivery</span>
+                    </label>
+                  </div>
+
+                  <div class="coupon flex items-center gap-4 flex-wrap">
+                    <input type="text" placeholder="Coupon Code" class="border border-gray-500 rounded-sm outline-none px-5 py-3 flex-grow">
+                    <button type="button" class="bg-p-red w-full sm:w-44 text-white outline-none rounded-sm self-stretch px-7 py-3 text-xs">Apply Coupon</button>
+                  </div>
+
+                  <button type="submit" form="billing-form" class="bg-p-red w-44 text-white grow-0 outline-none rounded-sm self-stretch  px-7 py-3 text-xs" style="margin-top: -15px;">Place Order</button>
+      
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer id="footer" class="bg-black py-16">
+    <div class="container">
+      <div class="footer flex gap-14 text-white flex-wrap items-start justify-start sm:justify-center">
+        
+        <div class="flex flex-col gap-4">
+          <h2 id="title" class="font-bold text-lg">Exclusive</h2>
+          <p class="text-sm font-semibold">Subscribe</p>
+          <p class="text-sm">Get 10% off your first order</p>
+          <div class="relative">
+            <i class="fas fa-angle-double-right absolute right-3 top-3 text-lg"></i>
+            <input type="text" placeholder="Enter your email" class="border border-white text-sm p-2 bg-black rounded-lg w-full">
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 basis-60">
+          <h2 id="title" class="font-bold text-lg">Support</h2>
+          <p class="text-sm">111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+          <p class="text-sm">exclusive@gmail.com</p>
+          <p class="text-sm">+88015-8888-9999</p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h2 id="title" class="font-bold text-lg">Account</h2>
+          <a href="account.html">My Account</a>
+          <a href="login.html">Login / Register</a>
+          <a href="cart.html">Cart</a>
+          <a href="wishlist.html">Wishlist</a>
+          <a href="">Shop</a>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h2 id="title" class="font-bold text-lg">Quick Link</h2>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms Of Use</a>
+          <a href="">FAQ</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <div class="flex flex-col gap-4 basis-60">
+          <h2 id="title" class="font-bold text-lg">Download App</h2>
+          <div class="qr-wrapper">
+            <p class="text-xs text-gray-300 mb-2">Save $3 with App New User Only</p>
+            <div class="qr-link">
+              <img src="/images/outside-icons/qr-code.png" alt="" class="block qr">
+              <!-- <img src="images/" alt=""> -->
+              <a href="" class="google-play" ><img src="/images/outside-icons/GooglePlay.png" class="w-full h-full" alt=""></a>
+              <a href="" class="app-store"><img src="/images/outside-icons/download-appstore.png" class="w-full h-full" alt=""></a>
+            </div>
+          </div>
+          <div class="social-links flex gap-5 items-center justify-start text-white">
+            <i class="fa-brands fa-facebook-f h-transition hover:text-p-red text-sm"></i>
+            <i class="fa-brands fa-twitter h-transition hover:text-p-red text-sm"></i>
+            <i class="fa-brands fa-instagram h-transition hover:text-p-red text-sm"></i>
+            <i class="fa-brands fa-linkedin h-transition hover:text-p-red text-sm"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

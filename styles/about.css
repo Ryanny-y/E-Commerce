@@ -1,0 +1,65 @@
+/* SMALL HEADER */
+.about-small-header a:first-child::after{
+  position: absolute;
+  content: '/';
+  right: -20px;
+}
+
+/* SALES NUMBER */
+.sale-number i {
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+}
+
+.sale-number > div:hover {
+  background: #DB4444;
+  color: white;
+}
+
+.sale-number > div:hover i {
+  color: black;
+  background: white;
+  transform: all .5s linear;
+}
+
+.sale-number > div:hover > span { 
+  background-color: rgba(197, 197, 197, 0.5);
+}.sale-number
+
+.sale-number > div:hover > span > i {
+  opacity: 1;
+}
+
+/* PAGINATIOn */
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #DB4444 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(179, 179, 179)!important;
+  opacity: 1 !important;
+}
+
+/* SERVICES */
+/* SERVICES SECTION*/
+.services .service p {
+  font-size: .7rem;
+}
+
+.services .service i {
+  position: relative;
+  border-radius: 50%;
+}
+
+.services .service i::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  right: -8;
+  top: -8;
+  left: -8;
+  bottom: -8;
+  background-color: rgba(163, 163, 163, 0.805);
+}
