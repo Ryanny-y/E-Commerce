@@ -58,12 +58,18 @@ class Cart {
       else {
         const matchingProduct = this.cartItems.find(cartItem => productId === cartItem.productId);
         matchingProduct.quantity = inputValue;
+        this.saveToStorage();
       }      
-      this.saveToStorage();
     });
 
     if(valid) {
-      alert('cart Updated!');
+      const updateTextEl = document.querySelector('.updated-success');
+      updateTextEl.classList.remove('hidden');
+
+      setTimeout(() => {
+        updateTextEl.classList.add('hidden')
+      }, 1500);
+
     } else {
       alert('Something went wrong!');
     }
