@@ -116,12 +116,12 @@
             </span>
 
             <div class="flex gap-4 items-center">
-              <a href="pages/wishlist.html" class="wishlist relative">
+              <a href="wishlist.html" class="wishlist relative">
                 <i class="fa-regular text-xl fa-heart h-transition md:text-sm hover:text-p-red"></i>
                 <span class="wishlist-quantity absolute text-p-red text-xs font-semibold" style="top: -10px;">0</span>
               </a>
   
-              <a href="pages/cart.html" class="add-to-cart relative">
+              <a href="cart.html" class="add-to-cart relative">
                 <i class="fa-solid text-xl fa-cart-shopping h-transition md:text-sm hover:text-p-red"></i>
                 <span class="cart-quantity absolute text-p-red text-xs font-semibold" style="top: -10px;">0</span>
               </a>
@@ -144,7 +144,7 @@
             <p class="text-xs">Home / <span class="font-semibold">Cart</span></p>
           </div>
 
-          <div class="cart-item-wrapper flex flex-col gap-10 w-11/12 mx-auto">
+          <div class="cart-wrapper w-11/12 mx-auto flex flex-col gap-10">
             <div class="labels text-sm justify-items-center md:justify-items-start grid grid-cols-3 md:grid-cols-4">
               <p>Product</p>
               <p class="hidden md:block" >Price</p>
@@ -152,12 +152,15 @@
               <p class="justify-self-end sm:justify-self-center md:justify-self-start" >Subtotal</p>
             </div>
 
-            
+            <div class="cart-item-wrapper flex flex-col gap-10">
+
+            </div>
           </div>
+          
 
           <div class="cart-action-btn flex items-center justify-between w-11/12 mx-auto">
-            <button class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Return To Shop</button>
-            <button class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Update Cart</button>
+            <a href="../index.html" class="text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Return To Shop</a>
+            <button class="update-cart-btn text-xs border border-gray-400 px-5 md:px-8 py-3 font-semibold rounded-sm h-transition hover:text-white hover:border-none hover:bg-p-red">Update Cart</button>
           </div>
         </div>
       </div>
@@ -169,7 +172,7 @@
         <div class="checkout-cart w-11/12 mx-auto flex items-start justify-between gap-10 flex-wrap">
           <div class="coupon flex items-center gap-3 basis-full flex-grow md:basis-2/5 flex-wrap">
             <input type="text" class="input-coupon border-2 border-gray-400 px-4 py-3 text-xs rounded-sm grow md:grow-0" placeholder="Coupon Code">
-            <button class="text-white bg-p-red text-xs px-5 py-3 md:px-10 rounded-sm h-transition hover:bg-black grow">Apply Coupon</button>
+            <button class="text-white bg-p-red text-xs px-5 py-3 md:px-10 rounded-sm h-transition hover:bg-black">Apply Coupon</button>
           </div>
 
           <div class="checkout-wrapper flex flex-col p-5 rounded-md gap-7 justify-center items-start border-2 border-gray-600 basis-full md:basis-2/5"> 
