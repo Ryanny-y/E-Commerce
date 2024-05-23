@@ -1,18 +1,20 @@
 // import { heroSlider, flashSalesSlider } from "/utils/swiperinit.js";
 import * as swipers from "../utils/swiperinit.js";
-import { headerSideBar, sideMenu} from "../utils/handleEffect.js";
+import { flashSaleCountdown, headerSideBar, sideMenu} from "../utils/handleEffect.js";
 import { renderTodayHTML, renderBestSellingHTML, renderExploreProductHTML } from "./home-page/homeSections.js";
 import { cart } from "../data/cart.js";
-import { displayCartQuantity, displayWishlistCount } from "../utils/reusableComp.js";
+import { displayCartQuantity, displayWishlistCount, searchBar } from "../utils/reusableComp.js";
 import { wishlist } from '../data/wishlist.js';
 
 function renderHomePage() {
   // For Animations
   headerSideBar();
   sideMenu();
+  searchBar();
 
   // TODAYS HTML ( FLASH SALES )
   renderTodayHTML();
+  flashSaleCountdown();
 
   // BEST SELLING PRODUCTS HTML
   renderBestSellingHTML();

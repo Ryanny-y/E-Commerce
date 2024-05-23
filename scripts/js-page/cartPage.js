@@ -1,12 +1,13 @@
 import { cart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { getDiscountedPrice, formatCurrency, getDiscount } from "../utils/money.js";
-import { displayCartQuantity, displayWishlistCount } from "../utils/reusableComp.js";
+import { displayCartQuantity, displayWishlistCount, searchBar } from "../utils/reusableComp.js";
 
 function renderCartHTML() {
   // Display Cart Quantity
   displayCartQuantity();
   displayWishlistCount();
+  searchBar();
 
   const cartHTML = cart.cartItems.map(cartItem => {
     const matchingProduct = products.find(product => cartItem.productId === product.id);

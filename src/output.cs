@@ -704,14 +704,6 @@ video {
   z-index: 50;
 }
 
-.z-40 {
-  z-index: 40;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
 .m-0 {
   margin: 0px;
 }
@@ -849,10 +841,6 @@ video {
   width: 3rem;
 }
 
-.w-14 {
-  width: 3.5rem;
-}
-
 .w-16 {
   width: 4rem;
 }
@@ -915,6 +903,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-14 {
+  width: 3.5rem;
 }
 
 .shrink-0 {

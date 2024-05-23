@@ -1,13 +1,14 @@
 import { products } from "../data/products.js";
 import { wishlist } from "../data/wishlist.js";
 import { formatCurrency, getDiscount, getDiscountedPrice } from "../utils/money.js";
-import { displayCartQuantity, displayWishlistCount } from "../utils/reusableComp.js";
+import { displayCartQuantity, displayWishlistCount, searchBar } from "../utils/reusableComp.js";
 import { cart } from "../data/cart.js";
 
 function renderWishListHTML() {
   // DIsplay Quantites
   displayCartQuantity();
   displayWishlistCount();
+  searchBar();
   
   document.querySelector('.wishlist-count').innerText = wishlist.getWishlistCount();
 

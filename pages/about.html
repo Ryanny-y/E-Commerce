@@ -86,9 +86,12 @@
           </div>
           
           <div class="header-search flex grow items-center justify-center basis-full flex-wrap md:justify-end gap-5 md:basis-60 md:flex-nowrap">
-            <span class="search-bar bg-neutral-100 flex items-center w-full grow justify-between md:w-56 md:grow-0 relative px-5 py-2 md:shrink">
-              <input type="text" required class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
+            <span class="search-bar relative bg-neutral-100 flex items-center w-full grow justify-between md:w-56 md:grow-0 px-5 py-2 md:shrink z-50">
+              <input type="text" class="block w-full bg-transparent border-none text-xs outline-none" placeholder="What are you looking for?">
               <i class="fa-solid w-0 fa-magnifying-glass bg-transparent h-transition hover:text-p-red absolute top-2 right-6"></i>
+              
+              <div class="absolute left-0 right-0 searched-item-container top-10 z-10">
+              </div>
             </span>
 
             <div class="flex gap-4 items-center">
@@ -396,8 +399,13 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module">
     import { teamSwiper } from "/scripts/utils/swiperinit.js";
+    import { displayCartQuantity, displayWishlistCount, searchBar} from '../scripts/utils/reusableComp.js';
 
     teamSwiper;
+
+    displayCartQuantity();
+    displayWishlistCount();
+    searchBar()
   </script>
 </body>
 </html>

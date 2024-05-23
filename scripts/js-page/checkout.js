@@ -1,13 +1,14 @@
 import { products } from '../data/products.js'
 import { cart } from '../data/cart.js';
 import { getDiscountedPrice } from '../utils/money.js';
-import { displayCartQuantity, displayWishlistCount } from '../utils/reusableComp.js';
+import { displayCartQuantity, displayWishlistCount, searchBar } from '../utils/reusableComp.js';
 
 function renderCheckOut() {
 
   // DISPLAY QUANTITIES
   displayCartQuantity();
   displayWishlistCount()
+  searchBar();
   
   let subtotal = 0;
 
