@@ -14,13 +14,22 @@ export function displayWishlistCount() {
 
 export function searchBar() {
   const searchInput = document.querySelector('.search-bar input');
-  searchInput.addEventListener('input', (e) => {
+  searchInput.addEventListener('keydown', (e) => {
     const inputValue = e.target.value;
 
     const filteredProducts = products.filter(product => 
       product.name.toLowerCase().includes(inputValue.toLowerCase())
       || product.keywords.some(keywords => keywords.includes(inputValue.toLowerCase())))
       .slice(0, 4);
+
+    if(e.key === 'Enter') {
+      if(inputValue === '') {
+        localStorage.setItem('filter-products', JSON.stringify(products));
+      } else {
+        localStorage.setItem('filter-products', JSON.stringify(filteredProducts));
+      }
+      window.location.href = 'http://127.0.0.1:5500/pages/product.html';
+    };
 
     const searchedProducts = filteredProducts.map(product => {
       return `
@@ -30,7 +39,6 @@ export function searchBar() {
       </div>`
     }).join('');
 
-    console.log(inputValue);
     const searchItemContainer = document.querySelector('.searched-item-container');
     if(!inputValue) {
       searchItemContainer.innerHTML = '';

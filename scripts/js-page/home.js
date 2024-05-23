@@ -5,6 +5,8 @@ import { renderTodayHTML, renderBestSellingHTML, renderExploreProductHTML } from
 import { cart } from "../data/cart.js";
 import { displayCartQuantity, displayWishlistCount, searchBar } from "../utils/reusableComp.js";
 import { wishlist } from '../data/wishlist.js';
+// import { renderAllProducts } from "./all-products.js";
+import { products } from "../data/products.js";
 
 function renderHomePage() {
   // For Animations
@@ -52,6 +54,12 @@ function renderHomePage() {
     });
   });
 
+  const viewAllBtn = document.querySelectorAll('.view-all-btn');
+  viewAllBtn.forEach(viewBtn => {
+    viewBtn.addEventListener('click', () => {
+      localStorage.setItem('filter-products', JSON.stringify(products));
+    })
+  });
 }
 
 renderHomePage();

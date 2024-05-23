@@ -1,4 +1,4 @@
-class Product {
+export class Product {
   id;
   name;
   image;
@@ -490,25 +490,6 @@ export const products = [
       'cellphone',
       'phone',
       'huawei',
-      'smart phone',
-    ],
-    category: 'cellphone'
-  },
-  {
-    id: '23b5324e-11f3-4fa4-b453-485d78e74017',
-    name: 'Xiaomi Redmi 12C',
-    image: 'images/products-img/Xiaomi Redmi 12C.png',
-    priceCents: 14499,
-    rating: {
-      stars: 4.5,
-      count: 624
-    },
-    discount: .20,
-    keywords: [
-      'cellphone',
-      'phone',
-      'xiami',
-      'redmi',
       'smart phone',
     ],
     category: 'cellphone'
