@@ -184,7 +184,7 @@
 
                 <div class="email-address text-gray-400 text-xs w-full flex flex-col gap-2">
                   <label for="email-address">Email Adress</label>
-                  <input type="text" required id="email-address" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
+                  <input type="email" required id="email-address" class="bg-slate-100 p-2 outline-none grow rounded-sm h-10">
                 </div>
 
                 <label for="save-information" class="text-xs flex items-center gap-3" >
@@ -196,40 +196,15 @@
               <div class="order-information basis-full md:basis-2/5 flex flex-col gap-7">
                 <!-- ORDER ORDER ITEMS WRAPPER -->
                 <div class="order-items flex flex-col gap-2">
-                  <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
-                    <img src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="" class="h-full">
-                    <p class="flex justify-between w-full">
-                      <span class="product-name">Beats Studio Wireless Headphones</span>
-                      <span class="product-price">$650</span>
-                    </p>
-                  </div>
-
-                  <div class="ordered-item flex items-center gap-3 h-12 text-xs md:text-sm justify-start font-semibold">
-                    <img src="/images/products-img/Beats_Studio_Pro_Wireless_Headphones.png" alt="" class="h-full">
-                    <p class="flex justify-between w-full">
-                      <span class="product-name">Beats Studio Wireless Headphones</span>
-                      <span class="product-price">$650</span>
-                    </p>
-                  </div>
+                  
                 </div>
 
                 <!-- PRICING -->
                 <div class="order-pricing flex flex-col gap-8 text-xs md:text-sm font-semibold">
-                  <div class="order-subtotal flex justify-between items-center relative">
-                    <p>Subtotal:</p>
-                    <p>$1750</p>
-                  </div>
-
-                  <div class="order-shipping flex justify-between items-center relative">
-                    <p>Shipping:</p>
-                    <p>FREE</p>
+                  <div class="order-price-summary flex flex-col gap-8">
+                    
                   </div>
                   
-                  <div class="order-total flex justify-between items-center relative">
-                    <p>Total:</p>
-                    <p>$1750</p>
-                  </div>
-
                   <!-- PAYMENT METHOD -->
                   <div class="payment-methods flex flex-col gap-8">
                     <div class="flex justify-between items-center">
@@ -257,7 +232,7 @@
                     <button type="button" class="bg-p-red w-full sm:w-44 text-white outline-none rounded-sm self-stretch px-7 py-3 text-xs">Apply Coupon</button>
                   </div>
 
-                  <button type="submit" form="billing-form" class="bg-p-red w-44 text-white grow-0 outline-none rounded-sm self-stretch  px-7 py-3 text-xs" style="margin-top: -15px;">Place Order</button>
+                  <button type="submit" form="billing-form" class="place-order-btn bg-p-red w-44 text-white grow-0 outline-none rounded-sm self-stretch  px-7 py-3 text-xs" style="margin-top: -15px;">Place Order</button>
       
                 </div>
 
@@ -331,5 +306,6 @@
     </div>
   </footer>
 
+  <script type="module" src="../scripts/js-page/checkout.js"></script>
 </body>
 </html>

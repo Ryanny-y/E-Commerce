@@ -4,7 +4,7 @@ export function formatCurrency(priceCents) {
 
 export function getDiscountedPrice(product) {
   if(product.discount > 0) {
-    return (formatCurrency(product.priceCents) * product.discount).toFixed(2);
+    return formatCurrency(product.priceCents - ((product.priceCents * (product.discount * 100)) / 100));
   }
   return formatCurrency(product.priceCents);
 };
