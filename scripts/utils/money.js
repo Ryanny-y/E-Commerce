@@ -3,9 +3,12 @@ export function formatCurrency(priceCents) {
 }
 
 export function getDiscountedPrice(product) {
-  return (formatCurrency(product.priceCents) * product.discount).toFixed(2);
+  if(product.discount > 0) {
+    return (formatCurrency(product.priceCents) * product.discount).toFixed(2);
+  }
+  return formatCurrency(product.priceCents);
 };
 
 export function getDiscount(discount) {
-  return discount.toFixed(2);
+  return (discount * 100);
 };

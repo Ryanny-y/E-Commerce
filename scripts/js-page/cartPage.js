@@ -1,11 +1,12 @@
 import { cart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { getDiscountedPrice, formatCurrency, getDiscount } from "../utils/money.js";
-import { displayCartQuantity } from "../utils/reusableComp.js";
+import { displayCartQuantity, displayWishlistCount } from "../utils/reusableComp.js";
 
 function renderCartHTML() {
   // Display Cart Quantity
   displayCartQuantity();
+  displayWishlistCount();
 
   const cartHTML = cart.cartItems.map(cartItem => {
     const matchingProduct = products.find(product => cartItem.productId === product.id);
@@ -38,8 +39,8 @@ function renderCartHTML() {
     return getDiscountedPrice(product) * cartItem.quantity;
   }).reduce((acc, cur) => acc + cur, 0);
   
-  const shipping = subtotal > 140 ? 'FREE' : '$99.99';
-  const total = subtotal + (shipping === 'FREE' ? 0 : 99.99);
+  const shipping = subtotal > 140 ? 'FREE' : '$4.99';
+  const total = subtotal + (shipping === 'FREE' ? 0 : 4.99);
   const cartTotalHTML = 
   `
   <h6 class="text-lg font-semibold">Cart Total</h6>

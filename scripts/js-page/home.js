@@ -3,7 +3,8 @@ import * as swipers from "../utils/swiperinit.js";
 import { headerSideBar, sideMenu} from "../utils/handleEffect.js";
 import { renderTodayHTML, renderBestSellingHTML, renderExploreProductHTML } from "./home-page/homeSections.js";
 import { cart } from "../data/cart.js";
-import { displayCartQuantity } from "../utils/reusableComp.js";
+import { displayCartQuantity, displayWishlistCount } from "../utils/reusableComp.js";
+import { wishlist } from '../data/wishlist.js';
 
 function renderHomePage() {
   // For Animations
@@ -21,6 +22,7 @@ function renderHomePage() {
 
   // Render Cart Quantity
   displayCartQuantity();
+  displayWishlistCount();
 
   // Add To Cart
   const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
@@ -36,6 +38,16 @@ function renderHomePage() {
       cart.addToCart(productId);
       displayCartQuantity()
     })
+  });
+
+  const addToWishListBtn = document.querySelectorAll('.wishlist-btn');
+  addToWishListBtn.forEach(wishlistBtn => {
+    wishlistBtn.addEventListener('click', () => {
+      const { productId } = wishlistBtn.dataset; 
+      
+      wishlist.addToWishList(productId);
+      displayWishlistCount();
+    });
   });
 
 }

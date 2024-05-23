@@ -40,7 +40,7 @@ class Cart {
     
     let valid = true;
 
-    cartItemsEl.forEach(el => {
+    cartItemsEl.forEach((el, index) => {
 
       // TODO: Clear Format, Add a choice when deleting the product
       const inputValue = parseInt(el.value);
@@ -50,7 +50,7 @@ class Cart {
         valid = false;
         return;
       } else if(inputValue === 0) {
-        alert('The Item will be removed');
+        alert(`The Item ${index + 1} will be removed`);
         document.querySelector(`.product-${productId}`).remove();
         this.cartItems = this.cartItems.filter(cartItem => cartItem.productId !== productId);
         this.saveToStorage();
