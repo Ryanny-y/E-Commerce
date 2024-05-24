@@ -12,7 +12,7 @@ export function renderTodayHTML() {
         <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
           <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-${getDiscount(product.discount)}%</p>
           <i class="wishlist-btn wishlist-${product.id} fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2" data-product-id="${product.id}"></i>
-          <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+          <a href="pages/product-details.html" target="_blank" class="view-product-btn fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2" data-product-id="${product.id}"></a>
           <img class="h-full w-full px-10 py-8" src="${product.image}" alt="">
           <button class="bg-black text-white absolute w-full r-0 h-10 add-to-cart-btn" data-product-Id="${product.id}">Add to Cart</button>
         </div>
@@ -52,7 +52,7 @@ export function renderBestSellingHTML() {
         <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
           <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-${getDiscount(product.discount)}%</p>
           <i class="wishlist-btn fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2" data-product-id="${product.id}"></i>
-          <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+          <a href="pages/product-details.html" target="_blank" class="view-product-btn fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2" data-product-id="${product.id}"></a>
           <img class="h-full w-full px-10 py-8" src="${product.image}" alt="">
           <button class="bg-black text-white absolute w-full r-0 h-10 add-to-cart-btn" data-product-Id="${product.id}"}>Add to Cart</button>
         </div>
@@ -89,7 +89,7 @@ export function renderExploreProductHTML() {
         <div class="product-img-container relative w-full overflow-hidden h-48 md:h-56 mb-2">
           <p class="sale bg-p-red text-white py-1 px-3 absolute top-0 left-0 text-xs text-center rounded-sm">-${getDiscount(product.discount)}%</p>
           <i class="wishlist-btn fa-regular fa-heart h-transition hover:text-p-red block absolute top-2 right-2" data-product-id="${product.id}"></i>
-          <i class="fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2"></i>
+          <a href="pages/product-details.html" target="_blank" class="view-product-btn fa-regular fa-eye h-transition hover:text-p-red block absolute top-10 right-2" data-product-id="${product.id}"></a>
           <img class="h-full w-full px-10 py-8" src="${product.image}" alt="">
           <button class="bg-black text-white absolute w-full r-0 h-10 add-to-cart-btn" data-product-Id="${product.id}"}>Add to Cart</button>
         </div>

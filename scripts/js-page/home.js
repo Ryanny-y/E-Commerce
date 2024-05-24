@@ -2,10 +2,7 @@
 import * as swipers from "../utils/swiperinit.js";
 import { flashSaleCountdown, headerSideBar, sideMenu} from "../utils/handleEffect.js";
 import { renderTodayHTML, renderBestSellingHTML, renderExploreProductHTML } from "./home-page/homeSections.js";
-import { cart } from "../data/cart.js";
 import { addToWishList, displayCartQuantity, displayWishlistCount, searchBar, addToCartBtn } from "../utils/reusableComp.js";
-import { wishlist } from '../data/wishlist.js';
-// import { renderAllProducts } from "./all-products.js";
 import { products } from "../data/products.js";
 
 function renderHomePage() {
@@ -40,6 +37,27 @@ function renderHomePage() {
       localStorage.setItem('filter-products', JSON.stringify(products));
     })
   });
+
+  const shopNowBtns = document.querySelectorAll('.shop-now');
+  shopNowBtns.forEach(shopNowBtn => {
+    shopNowBtn.addEventListener('click', () => {
+      localStorage.setItem('filter-products', JSON.stringify(products));
+    })
+  });
+
+  const viewProductBtns = document.querySelectorAll('.view-product-btn');
+  viewProductBtns.forEach(viewBtn => {
+    viewBtn.addEventListener('click',() => {
+      // Get the product Id
+      // Save to localstorage (Product detail Id)
+      // Find the matching product
+      // Render HTML
+      const { productId } = viewBtn.dataset;
+      localStorage.setItem('product-detail-id', JSON.stringify(productId));
+
+    });
+  });
+
 }
 
 renderHomePage();
