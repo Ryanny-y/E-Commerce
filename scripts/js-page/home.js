@@ -48,13 +48,8 @@ function renderHomePage() {
   const viewProductBtns = document.querySelectorAll('.view-product-btn');
   viewProductBtns.forEach(viewBtn => {
     viewBtn.addEventListener('click',() => {
-      // Get the product Id
-      // Save to localstorage (Product detail Id)
-      // Find the matching product
-      // Render HTML
       const { productId } = viewBtn.dataset;
       localStorage.setItem('product-detail-id', JSON.stringify(productId));
-
     });
   });
 

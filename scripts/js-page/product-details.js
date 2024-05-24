@@ -1,12 +1,5 @@
-import { products } from "../data/products.js";
+import { renderProductImage } from "./product-detail/productImage.js";
+import { renderProductInfo } from "./product-detail/productInfo.js";
 
-function renderProductDetailHTML() {
-
-  const productDetailId = JSON.parse(localStorage.getItem('product-detail-id'));
-
-  const product = products.find(product => product.id === productDetailId);
-  
-  console.log(product);
-}
-
-renderProductDetailHTML();
+renderProductInfo();
+renderProductImage();

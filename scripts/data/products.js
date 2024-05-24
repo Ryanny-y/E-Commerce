@@ -8,6 +8,7 @@ export class Product {
   keywords;
   category;
   dateAdded;
+  description;
 
   constructor(product) {
     this.id = product.id;
@@ -19,6 +20,7 @@ export class Product {
     this.keywords = product.keywords;
     this.category = product.category;
     this.dateAdded = product.dateAdded;
+    this.description = product.description;
   }
 
   getRatingStar() {
