@@ -48,3 +48,32 @@ export function searchBar() {
   });
 
 };
+
+export function addToCartBtn(renderFunc) {
+  const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
+  addToCartBtns.forEach(addBtn => {
+    let timeId;
+    addBtn.addEventListener('click', () => {
+      const { productId } = addBtn.dataset;
+      const addedPopUp = document.querySelector('.added-pop-up');
+      addedPopUp.classList.remove('hidden')
+
+      timeId = cart.addTimeOut(addedPopUp, timeId);
+
+      cart.addToCart(productId);
+      renderFunc();
+    })
+  });
+}
+
+export function addToWishList(renderFunc) {
+  const addToWishListBtn = document.querySelectorAll('.wishlist-btn');
+  addToWishListBtn.forEach(wishlistBtn => {
+    wishlistBtn.addEventListener('click', () => {
+      const { productId } = wishlistBtn.dataset; 
+      
+      wishlist.addToWishList(productId);
+      renderFunc();
+    });
+  });
+}

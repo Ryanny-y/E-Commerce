@@ -15,7 +15,6 @@ class WishList {
       alert('Added to wishlist')
     }
     this.saveToStorage();
-    console.log(this.wishlistItems);
   };
 
   saveToStorage() {
