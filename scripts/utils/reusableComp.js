@@ -28,7 +28,7 @@ export function searchBar() {
       } else {
         localStorage.setItem('filter-products', JSON.stringify(filteredProducts));
       }
-      window.location.href = 'http://127.0.0.1:5500/pages/product.html';
+      window.location.href = 'https://ecommercetech2.netlify.app/pages/product.html';
     };
 
     const searchedProducts = filteredProducts.map(product => {
