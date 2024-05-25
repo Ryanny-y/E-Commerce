@@ -75,7 +75,7 @@ export const products = [
   },
   {
     id: '1ccb8332-a304-4395-8723-ab8c1018776f',
-    name: 'Ips Lcd Gaming Monitor',
+    name: 'Ips LCD Gaming Monitor',
     image: 'images/products-img/Ips LCD Gaming Monitor.png',
     priceCents: 40000,
     rating: {
