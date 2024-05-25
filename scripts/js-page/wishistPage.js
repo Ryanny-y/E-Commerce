@@ -101,8 +101,8 @@ function renderJustForYou() {
    
   const jfyContainer = document.querySelector('.jfy-container');
   jfyContainer.innerHTML = justForYouHTML;
-  addToCartBtn(renderWishListHTML);
-
+  const addToCartBtns = jfyContainer.querySelectorAll('.add-to-cart-btn');
+  addToCartBtn(renderWishListHTML)
 }
 
 renderWishListHTML();

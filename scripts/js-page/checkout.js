@@ -40,7 +40,7 @@ function renderCheckOut() {
   orderPriceSummary.innerHTML = `
   <div class="order-subtotal flex justify-between items-center relative">
     <p>Subtotal:</p>
-    <p>$${subtotal}</p>
+    <p>$${subtotal.toFixed(2)}</p>
   </div>
 
   <div class="order-shipping flex justify-between items-center relative">
@@ -50,7 +50,7 @@ function renderCheckOut() {
   
   <div class="order-total flex justify-between items-center relative">
     <p>Total:</p>
-    <p>$${total}</p>
+    <p>$${total.toFixed(2)}</p>
   </div>`;
 
   const placeOrder = document.querySelector('#billing-form');
