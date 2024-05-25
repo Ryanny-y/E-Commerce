@@ -12,10 +12,13 @@ function renderCheckOut() {
   
   let subtotal = 0;
 
+  const cartItems = JSON.parse(localStorage.getItem('cart-items')) || cart.cartItems;
+
   // CHECKOUT HTML
   const checkoutOrderHTML = 
-    cart.cartItems.map(cartItem => {
+    cartItems.map(cartItem => {
       const product = products.find(product => product.id === cartItem.productId);
+
       const productSubtotal = (getDiscountedPrice(product) * cartItem.quantity);
       subtotal += productSubtotal;
 

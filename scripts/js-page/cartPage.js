@@ -62,12 +62,16 @@ function renderCartHTML() {
     <span class="total">$${total.toFixed(2)}</span>
   </p>
   
-  <a href="checkout.html" class="self-center text-sm font-normal bg-p-red text-white px-7 py-3 rounded-sm h-transition hover:bg-black" style="margin-top: -10px;">Proceed to checkout</a>
+  <a href="checkout.html" class="checkout-btn self-center text-sm font-normal bg-p-red text-white px-7 py-3 rounded-sm h-transition hover:bg-black" style="margin-top: -10px;">Proceed to checkout</a>
   `;
 
   const checkoutWrapper = document.querySelector('.checkout-wrapper');
   checkoutWrapper.innerHTML = cartTotalHTML;
 
+  const checkoutBtn = checkoutWrapper.querySelector('.checkout-btn');
+  checkoutBtn.addEventListener('click', () => {
+    localStorage.setItem('cart-items', JSON.stringify(cart.cartItems));
+  });
 }
 
 function updateCartButtonClickHandler() {

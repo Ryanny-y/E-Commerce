@@ -1,4 +1,4 @@
-import { products } from "../../data/products.js";
+import { Product, products } from "../../data/products.js";
 import { getDiscountedPrice } from '../../utils/money.js'
 
 export function renderProductInfo() {
@@ -45,13 +45,13 @@ export function renderProductInfo() {
         <button class="minus h-full border-r-gray-400 border px-3 hover:bg-p-red hover:text-white hover:border-p-red">
           <i class="fa-solid fa-minus w-full"></i>
         </button>
-        <input type="number" value="0" class="text-center outline-none flex-grow">
+        <input type="number" value="1" class="input-quantity text-center outline-none flex-grow">
         <button class="plus h-full border-l-gray-400 border px-3 hover:bg-p-red hover:text-white hover:border-p-red">
           <i class="fa-solid fa-plus w-full"></i>
         </button>
       </div>
 
-      <button class="text-sm self-stretch px-10 py-4 rounded text-center bg-p-red whitespace-nowrap text-white h-transition hover:bg-red-400">Buy Now</button>
+      <a href="checkout.html" class="buy-now-btn text-sm self-stretch px-10 py-4 rounded text-center bg-p-red whitespace-nowrap text-white h-transition hover:bg-red-400">Buy Now</a>
       <button class="text-xl self-stretch w-10 py-4 rounded text-center border border-gray-400 h-transition hover:bg-p-red hover:text-white hover:border-none"><i class="fa-regular fa-heart"></i></button>
 
     </div>
@@ -79,4 +79,34 @@ export function renderProductInfo() {
 
   const productInfoContainer = document.querySelector('.product-info');
   productInfoContainer.innerHTML = productInfoHTML;
+
+  // VARIABLES
+  const inputQuantity = productInfoContainer.querySelector('.product-quantity .input-quantity');
+  const addQuantity = productInfoContainer.querySelector('.product-quantity .plus');
+  const minusQuantity = productInfoContainer.querySelector('.product-quantity .minus');
+  const buyNowBtn = productInfoContainer.querySelector('.buy-now-btn');
+
+  const productItem = {
+    productId: product.id,
+    quantity: 1
+  }
+  addQuantity.addEventListener('click', () => {
+    inputQuantity.value++;
+    productItem.quantity++;
+    localStorage.setItem('cart-items', JSON.stringify([productItem]))
+  });
+
+  minusQuantity.addEventListener('click', () => {
+    if (parseInt(inputQuantity.value) <= 1) {
+      alert('invalid');
+    } else {
+      inputQuantity.value--;
+      productItem.quantity--;
+      localStorage.setItem('cart-items', JSON.stringify([productItem]))
+    }
+  });
+
+  buyNowBtn.addEventListener('click', () => {
+    localStorage.setItem('cart-items', JSON.stringify([productItem]))
+  });
 }
