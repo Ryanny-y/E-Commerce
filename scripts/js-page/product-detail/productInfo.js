@@ -45,7 +45,7 @@ export function renderProductInfo() {
         <button class="minus h-full border-r-gray-400 border px-3 hover:bg-p-red hover:text-white hover:border-p-red">
           <i class="fa-solid fa-minus w-full"></i>
         </button>
-        <input type="number" value="1" class="input-quantity text-center outline-none flex-grow">
+        <input type="number" value="1" min="1" class="input-quantity text-center outline-none flex-grow">
         <button class="plus h-full border-l-gray-400 border px-3 hover:bg-p-red hover:text-white hover:border-p-red">
           <i class="fa-solid fa-plus w-full"></i>
         </button>
@@ -86,27 +86,6 @@ export function renderProductInfo() {
   const minusQuantity = productInfoContainer.querySelector('.product-quantity .minus');
   const buyNowBtn = productInfoContainer.querySelector('.buy-now-btn');
 
-  const productItem = {
-    productId: product.id,
-    quantity: 1
-  }
-  addQuantity.addEventListener('click', () => {
-    inputQuantity.value++;
-    productItem.quantity++;
-    localStorage.setItem('cart-items', JSON.stringify([productItem]))
-  });
 
-  minusQuantity.addEventListener('click', () => {
-    if (parseInt(inputQuantity.value) <= 1) {
-      alert('invalid');
-    } else {
-      inputQuantity.value--;
-      productItem.quantity--;
-      localStorage.setItem('cart-items', JSON.stringify([productItem]))
-    }
-  });
 
-  buyNowBtn.addEventListener('click', () => {
-    localStorage.setItem('cart-items', JSON.stringify([productItem]))
-  });
 }

@@ -19,6 +19,7 @@ function renderCheckOut() {
     cartItems.map(cartItem => {
       const product = products.find(product => product.id === cartItem.productId);
 
+      console.log(cartItem);
       const productSubtotal = (getDiscountedPrice(product) * cartItem.quantity);
       subtotal += productSubtotal;
 
@@ -27,7 +28,7 @@ function renderCheckOut() {
         <img src="/${product.image}" alt="" class="h-full w-12 shrink-0" >
         <p class="flex justify-between w-full">
           <span class="product-name">${product.name}</span>
-          <span class="product-price">$${productSubtotal}</span>
+          <span class="product-price">$${productSubtotal.toFixed(2)}</span>
         </p>
       </div>`;
     }).join('');

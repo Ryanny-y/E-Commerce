@@ -1,6 +1,11 @@
 import { products } from "../../data/products.js";
+import { displayCartQuantity, displayWishlistCount, searchBar } from '../../utils/reusableComp.js';
 
 export function renderProductImage() {
+  // DISPLAY QUANTITIES
+  displayCartQuantity();
+  displayWishlistCount();
+  searchBar();
   
   const productDetailId = JSON.parse(localStorage.getItem('product-detail-id'));
   const product = products.find(product => product.id === productDetailId);
